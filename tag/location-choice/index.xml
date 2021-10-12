@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Location Choice | Deyu Rao</title>
+    <link>/tag/location-choice/</link>
+      <atom:link href="/tag/location-choice/index.xml" rel="self" type="application/rss+xml" />
+    <description>Location Choice</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Location Choice</title>
+      <link>/tag/location-choice/</link>
+    </image>
+    
+    <item>
+      <title>The Role of Environmental Amenities in the Urban Economy: Evidence From a Spatial General Equilibrium Approach</title>
+      <link>/publication/environment_agglomeration/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/environment_agglomeration/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
