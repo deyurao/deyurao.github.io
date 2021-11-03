@@ -5,7 +5,7 @@
     <link>/tag/health/</link>
       <atom:link href="/tag/health/index.xml" rel="self" type="application/rss+xml" />
     <description>Health</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 29 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 22 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Health</title>
@@ -13,18 +13,18 @@
     </image>
     
     <item>
-      <title>Improved Transportation Networks Facilitate Adaptation to Pollution and Temperature Extremes</title>
-      <link>/publication/intercity_travel/</link>
-      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
-      <guid>/publication/intercity_travel/</guid>
+      <title>The Healthcare Cost of Air Pollution: Evidence from the World’s Largest Payment Network</title>
+      <link>/publication/pollution_health/</link>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/pollution_health/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>The Healthcare Cost of Air Pollution: Evidence from the World’s Largest Payment Network</title>
-      <link>/publication/pollution_health/</link>
-      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
-      <guid>/publication/pollution_health/</guid>
+      <title>Improved Transportation Networks Facilitate Adaptation to Pollution and Temperature Extremes</title>
+      <link>/publication/intercity_travel/</link>
+      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/intercity_travel/</guid>
       <description></description>
     </item>
     
