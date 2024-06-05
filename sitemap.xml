@@ -21,52 +21,64 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication-type/3/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tag/consumption-access/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tag/economic-agglomeration/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tag/environmental-amenities/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tag/location-choice/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication_types/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication/environment_agglomeration/</loc>
-    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/adaptation/</loc>
+    <lastmod>2024-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/authors/</loc>
-    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tag/health/</loc>
-    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tag/pollution/</loc>
-    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/publication/pollution_health/</loc>
-    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/author/with-panle-jia-barwick-shanjun-li-nahim-bin-zahur/</loc>
-    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication/intercity_travel/</loc>
-    <lastmod>2021-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/mobility/</loc>
+    <lastmod>2024-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/pollution/</loc>
+    <lastmod>2024-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/transportation-infrastructure/</loc>
+    <lastmod>2024-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/author/with-panle-jia-barwick-dave-donaldson-shanjun-li-yatang-lin/</loc>
-    <lastmod>2021-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication-type/2/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/health/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/pollution_health/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/with-panle-jia-barwick-shanjun-li-nahim-bin-zahur./</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
@@ -77,7 +89,7 @@
     <loc>/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>/author/deyu-rao/</loc>
+    <loc>/author/admin/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/jupyter/</loc>
@@ -139,5 +151,7 @@
   </url><url>
     <loc>/tag/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>/author/deyu-rao/</loc>
   </url>
 </urlset>
