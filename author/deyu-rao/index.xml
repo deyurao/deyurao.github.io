@@ -2,15 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deyu Rao</title>
-    <link>/author/deyu-rao/</link>
-      <atom:link href="/author/deyu-rao/index.xml" rel="self" type="application/rss+xml" />
+    <link>//localhost:4321/author/deyu-rao/</link>
+      <atom:link href="//localhost:4321/author/deyu-rao/index.xml" rel="self" type="application/rss+xml" />
     <description>Deyu Rao</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>//localhost:4321/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Deyu Rao</title>
-      <link>/author/deyu-rao/</link>
+      <link>//localhost:4321/author/deyu-rao/</link>
     </image>
+    
+    <item>
+      <title>Deyu Rao</title>
+      <link>//localhost:4321/author/deyu-rao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/author/deyu-rao/</guid>
+      <description>&lt;p&gt;&lt;sup&gt;Last updated in June 2024&lt;/sup&gt;&lt;/p&gt;
+&lt;h4 id=&#34;hello-i-am-an-assistant-professor-in-the-department-of-economics-at-the-hong-kong-university-of-science-and-technology-hkust&#34;&gt;Hello! I am an Assistant Professor in the Department of Economics at the Hong Kong University of Science and Technology (HKUST).&lt;/h4&gt;
+&lt;h4 id=&#34;my-research-interests-are-environmental-economics-and-urban-economics&#34;&gt;My research interests are environmental economics and urban economics.&lt;/h4&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;subi-am-seeking-ideal-candidates-with-a-keen-interest-in-economics-and-sustainability-along-with-strong-analytical-skills-preference-will-be-given-to-students-who-are-proficient-in-stata-arcgis-r-andor-python-if-you-are-interested-please-email-your-cv-code-sample-and-a-writing-sample-to-dyraousthk-sponsorship-for-hong-kong-working-visa-is-available-sub&#34;&gt;&lt;sub&gt;I am seeking ideal candidates with a keen interest in economics and sustainability, along with strong analytical skills. Preference will be given to students who are proficient in Stata, ArcGIS, R, and/or Python. If you are interested, please email your CV, code sample, and a writing sample to 
+&lt;a href=&#34;mailto:dyrao@ust.hk&#34;&gt;dyrao@ust.hk&lt;/a&gt;. Sponsorship for Hong Kong Working Visa is available. &lt;/sub&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;sub-sub&#34;&gt;&lt;sub&gt; &lt;/sub&gt;&lt;/h4&gt;
+&lt;hr&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

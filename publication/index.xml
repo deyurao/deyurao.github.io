@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Deyu Rao</title>
-    <link>/publication/</link>
-      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>//localhost:4321/publication/</link>
+      <atom:link href="//localhost:4321/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 30 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>//localhost:4321/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
-      <link>/publication/</link>
+      <link>//localhost:4321/publication/</link>
     </image>
     
     <item>
       <title>The Role of Environmental Amenities in the Urban Economy: Evidence From a Spatial General Equilibrium Approach</title>
-      <link>/publication/environment_agglomeration/</link>
+      <link>//localhost:4321/publication/environment_agglomeration/</link>
       <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>/publication/environment_agglomeration/</guid>
+      <guid>//localhost:4321/publication/environment_agglomeration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Improved Transportation Networks Facilitate Adaptation to Pollution and Temperature Extremes</title>
-      <link>/publication/intercity_travel/</link>
+      <link>//localhost:4321/publication/intercity_travel/</link>
       <pubDate>Fri, 31 May 2024 00:00:00 +0000</pubDate>
-      <guid>/publication/intercity_travel/</guid>
+      <guid>//localhost:4321/publication/intercity_travel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Healthcare Cost of Air Pollution: Evidence from the World&#39;s Largest Payment Network</title>
-      <link>/publication/pollution_health/</link>
+      <link>//localhost:4321/publication/pollution_health/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>/publication/pollution_health/</guid>
+      <guid>//localhost:4321/publication/pollution_health/</guid>
       <description></description>
     </item>
     
