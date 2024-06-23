@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Transportation Infrastructure | Deyu Rao</title>
-    <link>//localhost:4321/tag/transportation-infrastructure/</link>
-      <atom:link href="//localhost:4321/tag/transportation-infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/transportation-infrastructure/</link>
+      <atom:link href="/tag/transportation-infrastructure/index.xml" rel="self" type="application/rss+xml" />
     <description>Transportation Infrastructure</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 31 May 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>//localhost:4321/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Transportation Infrastructure</title>
-      <link>//localhost:4321/tag/transportation-infrastructure/</link>
+      <link>/tag/transportation-infrastructure/</link>
     </image>
     
     <item>
       <title>Improved Transportation Networks Facilitate Adaptation to Pollution and Temperature Extremes</title>
-      <link>//localhost:4321/publication/intercity_travel/</link>
+      <link>/publication/intercity_travel/</link>
       <pubDate>Fri, 31 May 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/publication/intercity_travel/</guid>
+      <guid>/publication/intercity_travel/</guid>
       <description></description>
     </item>
     
