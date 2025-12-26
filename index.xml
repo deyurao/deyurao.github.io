@@ -77,17 +77,49 @@
     </item>
     
     <item>
+      <title> Continental Drying: A Threat to Our Common Future.</title>
+      <link>/publication/world_bank_report/</link>
+      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>/publication/world_bank_report/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Impact of Water Resources on Trade under a Changing Climate</title>
+      <link>/publication/trade_water_reduced/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>/publication/trade_water_reduced/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Water Woes in a Woven World: The Economic and Trade Impacts of Water Stress</title>
+      <link>/publication/trade_water_ge/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>/publication/trade_water_ge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The Role of Environmental Amenities in the Urban Economy: Evidence From a Spatial General Equilibrium Approach</title>
       <link>/publication/environment_agglomeration/</link>
-      <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
       <guid>/publication/environment_agglomeration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Random Forests with Economic Roots: Explaining Machine Learning in Hedonic Imputation.</title>
+      <link>/publication/hedonic_ml/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>/publication/hedonic_ml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Improved Transportation Networks Facilitate Adaptation to Pollution and Temperature Extremes</title>
       <link>/publication/intercity_travel/</link>
-      <pubDate>Fri, 31 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
       <guid>/publication/intercity_travel/</guid>
       <description></description>
     </item>
@@ -539,17 +571,17 @@ $$&lt;/p&gt;
     
     <item>
       <title>External Project</title>
-      <link>/project/external-project/</link>
+      <link>/archive/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
+      <guid>/archive/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>/project/internal-project/</link>
+      <link>/archive/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/internal-project/</guid>
+      <guid>/archive/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;

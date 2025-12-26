@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>With Shipei Zeng. | Deyu Rao</title>
+    <link>/author/with-shipei-zeng./</link>
+      <atom:link href="/author/with-shipei-zeng./index.xml" rel="self" type="application/rss+xml" />
+    <description>With Shipei Zeng.</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>With Shipei Zeng.</title>
+      <link>/author/with-shipei-zeng./</link>
+    </image>
+    
+    <item>
+      <title>Random Forests with Economic Roots: Explaining Machine Learning in Hedonic Imputation.</title>
+      <link>/publication/hedonic_ml/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>/publication/hedonic_ml/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
