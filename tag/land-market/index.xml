@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Land Market | Deyu Rao</title>
+    <link>/tag/land-market/</link>
+      <atom:link href="/tag/land-market/index.xml" rel="self" type="application/rss+xml" />
+    <description>Land Market</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Land Market</title>
+      <link>/tag/land-market/</link>
+    </image>
+    
+    <item>
+      <title>Passenger Travel Costs and the Spatial Organization of Economic Activity</title>
+      <link>/publication/hsr_trade/index_archive/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/publication/hsr_trade/index_archive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pollution in the Administrative Calculus: Evidence from Land Allocation in China</title>
+      <link>/publication/land_environment/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/publication/land_environment/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
