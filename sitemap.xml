@@ -68,9 +68,6 @@
     <loc>/tag/water/</loc>
     <lastmod>2025-11-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/author/with-world-bank-author-team./</loc>
-    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tag/consumption-access/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -101,9 +98,6 @@
     <loc>/publication/hedonic_ml/</loc>
     <lastmod>2024-11-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/author/with-shipei-zeng./</loc>
-    <lastmod>2024-11-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tag/adaptation/</loc>
     <lastmod>2024-07-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -126,9 +120,6 @@
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication/pollution_health/</loc>
-    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/author/with-panle-jia-barwick-shanjun-li-nahim-bin-zahur./</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/</loc>
@@ -204,5 +195,11 @@
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url><url>
     <loc>/author/deyu-rao/</loc>
+  </url><url>
+    <loc>/author/with-panle-jia-barwick-shanjun-li-nahim-bin-zahur./</loc>
+  </url><url>
+    <loc>/author/with-shipei-zeng./</loc>
+  </url><url>
+    <loc>/author/with-world-bank-author-team./</loc>
   </url>
 </urlset>
