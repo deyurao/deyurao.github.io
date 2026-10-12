@@ -41,6 +41,7 @@
 .space26 table.space-table td, .space26 table.space-table th { padding: .62rem .75rem; border-bottom: 1px solid var(--space-border); text-align: left; vertical-align: top; }
 .space26 table.space-table tr:last-child td { border-bottom: 0; }
 .space26 table.space-table th { font-weight: 700; color: var(--space-blue); }
+.space26 table.space-schedule thead th:first-child { background: #e7eef6; border-left: 5px solid #24558f; color: #163a63; }
 .space26 .space-time { width: 105px; white-space: nowrap; color: var(--space-muted); font-variant-numeric: tabular-nums; }
 .space26 .space-speaker { font-weight: 650; color: #1d344d; }
 .space26 .space-affiliation { font-size: .79rem; font-weight: 400; line-height: 1.4; color: var(--space-muted); margin: .08rem 0 .24rem; }
@@ -200,6 +201,7 @@
 .space26[data-space-theme=&#34;dark&#34;] .space-table tbody tr.space-ai:hover td {background:#513432;}
 .space26[data-space-theme=&#34;dark&#34;] .space-table tbody tr.space-poster-entry:hover td, .space26[data-space-theme=&#34;dark&#34;] .space-table tbody tr.space-poster-session:hover td {background:#245147;}
 .space26[data-space-theme=&#34;dark&#34;] table.space-table thead {background:#27394c;}
+.space26[data-space-theme=&#34;dark&#34;] table.space-schedule thead th:first-child {background:#2c4158; border-left:5px solid #8eb6f5; color:#e7f1ff;}
 .space26[data-space-theme=&#34;dark&#34;] .space-origin-airport {background:#18313a; border-color:#3d6371; border-left-color:#4bb0c1;}
 .space26[data-space-theme=&#34;dark&#34;] .space-origin-rail {background:#27263e; border-color:#494769; border-left-color:#9c8fe5;}
 .space26[data-space-theme=&#34;dark&#34;] .space-origin-mtr {background:#1d332d; border-color:#436354; border-left-color:#72c6a1;}
@@ -245,6 +247,7 @@
 .space26:not([data-space-theme]) .space-table tbody tr.space-ai:hover td {background:#513432;}
 .space26:not([data-space-theme]) .space-table tbody tr.space-poster-entry:hover td, .space26:not([data-space-theme]) .space-table tbody tr.space-poster-session:hover td {background:#245147;}
 .space26:not([data-space-theme]) table.space-table thead {background:#27394c;}
+.space26:not([data-space-theme]) table.space-schedule thead th:first-child {background:#2c4158; border-left:5px solid #8eb6f5; color:#e7f1ff;}
 .space26:not([data-space-theme]) .space-origin-airport {background:#18313a; border-color:#3d6371; border-left-color:#4bb0c1;}
 .space26:not([data-space-theme]) .space-origin-rail {background:#27263e; border-color:#494769; border-left-color:#9c8fe5;}
 .space26:not([data-space-theme]) .space-origin-mtr {background:#1d332d; border-color:#436354; border-left-color:#72c6a1;}
@@ -787,7 +790,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
 &lt;section aria-labelledby=&#34;space-program-title&#34; class=&#34;space-fold-section&#34; id=&#34;space-program&#34;&gt;&lt;details class=&#34;space-fold space-main-fold&#34; open=&#34;&#34;&gt;&lt;summary class=&#34;space-fold-heading&#34;&gt;&lt;h2 class=&#34;space-section space-fold-title&#34; id=&#34;space-program-title&#34;&gt;Workshop program&lt;/h2&gt;&lt;/summary&gt;&lt;div class=&#34;space-fold-content&#34;&gt;
 &lt;p class=&#34;space-small&#34;&gt;All times are Hong Kong time (HKT, UTC+8). The program is tentative and may be updated.&lt;/p&gt;
 &lt;h3&gt;Saturday, November 7&lt;/h3&gt;
-&lt;div class=&#34;space-table-scroll&#34;&gt;&lt;table class=&#34;space-table&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&#34;col&#34;&gt;Time (HKT)&lt;/th&gt;&lt;th scope=&#34;col&#34;&gt;Session / presentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;div class=&#34;space-table-scroll&#34;&gt;&lt;table class=&#34;space-table space-schedule&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&#34;col&#34;&gt;Time (HKT)&lt;/th&gt;&lt;th scope=&#34;col&#34;&gt;Session / presentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
 &lt;tr class=&#34;space-admin&#34;&gt;&lt;td class=&#34;space-time&#34;&gt;08:30&lt;/td&gt;&lt;td&gt;&lt;span class=&#34;space-speaker&#34;&gt;Registration&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr class=&#34;space-admin&#34;&gt;&lt;td class=&#34;space-time&#34;&gt;08:50–09:00&lt;/td&gt;&lt;td&gt;&lt;span class=&#34;space-speaker&#34;&gt;Opening address&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr class=&#34;space-talk&#34;&gt;&lt;td class=&#34;space-time&#34;&gt;09:00–09:40&lt;/td&gt;&lt;td&gt;&lt;span class=&#34;space-speaker&#34;&gt;&lt;a class=&#34;space-name-link&#34; href=&#34;https://www.xinming-du.com/home&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;&lt;span class=&#34;space-family-name&#34;&gt;DU&lt;/span&gt;, Xinming&lt;/a&gt;&lt;/span&gt;&lt;div class=&#34;space-affiliation&#34;&gt;National University of Singapore&lt;/div&gt;&lt;div class=&#34;space-paper-title&#34;&gt;Grid Lock-In and the Geography of AI&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
@@ -805,7 +808,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
 &lt;tr class=&#34;space-meal space-dinner&#34;&gt;&lt;td class=&#34;space-time&#34;&gt;18:30&lt;/td&gt;&lt;td&gt;&lt;span class=&#34;space-speaker&#34;&gt;Workshop dinner&lt;/span&gt;&lt;div&gt;By invitation only&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
 &lt;h3&gt;Sunday, November 8&lt;/h3&gt;
-&lt;div class=&#34;space-table-scroll&#34;&gt;&lt;table class=&#34;space-table&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&#34;col&#34;&gt;Time (HKT)&lt;/th&gt;&lt;th scope=&#34;col&#34;&gt;Session / presentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;div class=&#34;space-table-scroll&#34;&gt;&lt;table class=&#34;space-table space-schedule&#34;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&#34;col&#34;&gt;Time (HKT)&lt;/th&gt;&lt;th scope=&#34;col&#34;&gt;Session / presentation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
 &lt;tr class=&#34;space-talk&#34;&gt;&lt;td class=&#34;space-time&#34;&gt;09:00–09:40&lt;/td&gt;&lt;td&gt;&lt;span class=&#34;space-speaker&#34;&gt;&lt;a class=&#34;space-name-link&#34; href=&#34;https://mahong.weebly.com/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;&lt;span class=&#34;space-family-name&#34;&gt;MA&lt;/span&gt;, Hong&lt;/a&gt;&lt;/span&gt;&lt;div class=&#34;space-affiliation&#34;&gt;Tsinghua University&lt;/div&gt;&lt;div class=&#34;space-paper-title&#34;&gt;The Last Mile Matters: How Delivery Infrastructure Shapes Online Trade and Consumption Inequality&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr class=&#34;space-talk&#34;&gt;&lt;td class=&#34;space-time&#34;&gt;09:40–10:20&lt;/td&gt;&lt;td&gt;&lt;span class=&#34;space-speaker&#34;&gt;&lt;a class=&#34;space-name-link&#34; href=&#34;https://hkasahar.github.io/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;&lt;span class=&#34;space-family-name&#34;&gt;KASAHARA&lt;/span&gt;, Hiroyuki&lt;/a&gt;&lt;/span&gt;&lt;div class=&#34;space-affiliation&#34;&gt;University of British Columbia&lt;/div&gt;&lt;div class=&#34;space-paper-title&#34;&gt;The Impact of Electrification on Quality and Productivity: Evidence from Japanese Cotton Spinning&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr class=&#34;space-break&#34;&gt;&lt;td class=&#34;space-time&#34;&gt;10:20–10:40&lt;/td&gt;&lt;td&gt;&lt;span class=&#34;space-speaker&#34;&gt;Coffee break&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
