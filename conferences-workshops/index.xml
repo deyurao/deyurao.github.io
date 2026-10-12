@@ -91,7 +91,7 @@
 .space26 .space-sponsor-intro &gt; p { margin-bottom: .65rem; }
 .space26 .space-supporters { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .6rem; align-items: stretch; }
 .space26 .space-supporter { border:1px solid var(--space-border); border-radius:.4rem; min-height: 88px; padding: .75rem .7rem; display:flex; justify-content:center; align-items:center; gap: .7rem; color:var(--space-blue); background:#fbfcfe; text-decoration:none; font-weight:650; font-size:.80rem; line-height:1.35; }
-.space26 .space-supporter:hover { background:#edf5f9; text-decoration:none; }
+.space26 .space-supporter:hover { background:#fff; text-decoration:none; }
 .space26 .space-supporter img { max-width:100%; width:100%; height:auto; max-height:65px; object-fit:contain; }
 .space26 .space-supporter-fallback { display:none; }
 .space26 .space-casd-flag { color:#114d76; font-size:1.5rem; font-weight:800; line-height:1; padding-right:.65rem; border-right:1px solid #ccd6de; }
@@ -128,7 +128,7 @@
 .space26 .space-ias-logos &gt; a { display: flex; align-items: center; justify-content: center; min-width: 0; padding: .15rem; border-radius: .3rem; }
 .space26 .space-ias-logos &gt; a:first-child { flex: 0 1 46%; }
 .space26 .space-ias-logos &gt; a:last-child { flex: 1 1 54%; }
-.space26 .space-ias-logos &gt; a:hover { background: #f1f7fc; }
+.space26 .space-ias-logos &gt; a:hover { background: transparent; }
 .space26 .space-ias-logos img { width: 100%; max-height: 92px; object-fit: contain; }
 .space26 .space-ias-logos &gt; a:first-child img { max-height: 106px; }
 .space26 .space-logo-divider { flex: 0 0 1px; background: #d6dee7; align-self: stretch; max-height: 78px; }
@@ -215,8 +215,8 @@
 .space26[data-space-theme=&#34;dark&#34;] .space-terminal-note &gt; strong:first-child {color:#ffe2a0;}
 .space26[data-space-theme=&#34;dark&#34;] .space-hotel {background:#192839;}
 .space26[data-space-theme=&#34;dark&#34;] .space-supporter, .space26[data-space-theme=&#34;dark&#34;] .space-sponsor-intro .space-supporter {background:#fff; color:#1e3b58;}
-.space26[data-space-theme=&#34;dark&#34;] .space-supporter:hover {background:#eef7fb;}
-.space26[data-space-theme=&#34;dark&#34;] .space-ias-logos &gt; a:hover {background:#ebf4fc;}
+.space26[data-space-theme=&#34;dark&#34;] .space-supporter:hover {background:#fff;}
+.space26[data-space-theme=&#34;dark&#34;] .space-ias-logos &gt; a:hover {background:transparent;}
 .space26[data-space-theme=&#34;dark&#34;] .space-name-link {border-bottom-color:#76cfc7;}
 .space26[data-space-theme=&#34;dark&#34;] .space-theme-toggle, .space26[data-space-theme=&#34;dark&#34;] .space-theme-reset { background:rgba(17,34,53,.96); color:#ebf5ff; border-color:#7894ad; }
 .space26[data-space-theme=&#34;dark&#34;] .space-theme-toggle:hover, .space26[data-space-theme=&#34;dark&#34;] .space-theme-reset:hover {background:#254561;}
@@ -261,8 +261,8 @@
 .space26:not([data-space-theme]) .space-terminal-note &gt; strong:first-child {color:#ffe2a0;}
 .space26:not([data-space-theme]) .space-hotel {background:#192839;}
 .space26:not([data-space-theme]) .space-supporter, .space26:not([data-space-theme]) .space-sponsor-intro .space-supporter {background:#fff; color:#1e3b58;}
-.space26:not([data-space-theme]) .space-supporter:hover {background:#eef7fb;}
-.space26:not([data-space-theme]) .space-ias-logos &gt; a:hover {background:#ebf4fc;}
+.space26:not([data-space-theme]) .space-supporter:hover {background:#fff;}
+.space26:not([data-space-theme]) .space-ias-logos &gt; a:hover {background:transparent;}
 .space26:not([data-space-theme]) .space-name-link {border-bottom-color:#76cfc7;}
 .space26:not([data-space-theme]) .space-theme-toggle, .space26:not([data-space-theme]) .space-theme-reset { background:rgba(17,34,53,.96); color:#ebf5ff; border-color:#7894ad; }
 .space26:not([data-space-theme]) .space-theme-toggle:hover, .space26:not([data-space-theme]) .space-theme-reset:hover {background:#254561;}
