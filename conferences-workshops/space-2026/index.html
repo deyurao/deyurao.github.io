@@ -1211,6 +1211,14 @@ body:has(.space26) .space26 { margin:0; border:0; }
   .space26 .space-ias-logos img,
   .space26 .space-ias-logos > a:first-child img { height: 54px; }
 }
+.space26 .space-date-numerals { flex-wrap: wrap; white-space: normal; }
+@media (max-width: 700px) {
+  .space26 .space-table-scroll { overflow-x: visible; }
+  .space26 table.space-table { min-width: 0; width: 100%; table-layout: auto; font-size: .84rem; }
+  .space26 table.space-table th,
+  .space26 table.space-table td { white-space: normal; overflow-wrap: break-word; }
+  .space26 table.space-table .space-time { width: 6.4rem; white-space: nowrap; }
+}
 </style>
 <div class="space26">
 <header class="space-hero"><div class="space-hero-photo"><div class="space-theme-controls">
@@ -1227,7 +1235,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
   if (!img) return;
   img.src = art[Math.floor(Math.random() * art.length)];
 })();
-</script><div class="space-photo-fallback" role="status">Building image unavailable.</div><p class="space-hero-caption">HKUST Jockey Club Institute for Advanced Study · <a href="https://ias.hkust.edu.hk/news-media/photo-gallery/architecture" rel="noopener" target="_blank">IAS gallery ↗</a>. The graph is AI enhanced for style.</p></div>
+</script><div class="space-photo-fallback" role="status">Building image unavailable.</div><p class="space-hero-caption">HKUST Jockey Club Institute for Advanced Study · <a href="https://ias.hkust.edu.hk/news-media/photo-gallery/architecture" rel="noopener" target="_blank">IAS gallery ↗</a>. The graph is AI-enhanced for style.</p></div>
 <p class="space-eyebrow space-event-title">HONG KONG · 2026</p>
 <h2>Asian SPACE Workshop</h2>
 <p class="space-workshop-expansion">Spatial and Political Analysis of the Contemporary Economy</p>
@@ -1237,7 +1245,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
   </a>
   <div class="space-event-date" aria-label="Saturday and Sunday, November 7 to 8, 2026">
     <span class="space-card-label">DATE</span>
-    <div class="space-date-numerals"><span class="space-date-month">NOV</span><span class="space-date-days">7–8</span><span class="space-date-year">2026</span></div>
+    <div class="space-date-numerals"><span class="space-date-month">NOVEMBER</span><span class="space-date-days">7–8</span><span class="space-date-year">2026</span></div>
     <span class="space-date-weekdays">SATURDAY – SUNDAY</span>
   </div>
   <div class="space-event-detail">
