@@ -680,6 +680,8 @@ body:has(.space26) .space26 { margin:0; border:0; }
 @media(prefers-color-scheme:dark){.space26:not([data-space-theme]) .space-venue-map-link {color:#7bded3;}}
 .space26 .space-hero-photo img { margin: 0; }
 .space26 .space-hero-caption { margin: .12rem 0 0; }
+.space26 .space-table-scroll { width: 100%; overflow-x: auto; }
+.space26 table.space-table { display: table; width: 100%; max-width: 100%; overflow: visible; margin-bottom: 0; }
 &lt;/style&gt;
 &lt;div class=&#34;space26&#34;&gt;
 &lt;header class=&#34;space-hero&#34;&gt;&lt;div class=&#34;space-hero-photo&#34;&gt;&lt;div class=&#34;space-theme-controls&#34;&gt;
@@ -696,7 +698,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
   if (!img) return;
   img.src = art[Math.floor(Math.random() * art.length)];
 })();
-&lt;/script&gt;&lt;div class=&#34;space-photo-fallback&#34; role=&#34;status&#34;&gt;Building image unavailable.&lt;/div&gt;&lt;p class=&#34;space-hero-caption&#34;&gt;HKUST Jockey Club Institute for Advanced Study · &lt;a href=&#34;https://ias.hkust.edu.hk/news-media/photo-gallery/architecture&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official IAS architecture gallery ↗&lt;/a&gt;. The graph is AI enhanced for style.&lt;/p&gt;&lt;/div&gt;
+&lt;/script&gt;&lt;div class=&#34;space-photo-fallback&#34; role=&#34;status&#34;&gt;Building image unavailable.&lt;/div&gt;&lt;p class=&#34;space-hero-caption&#34;&gt;HKUST Jockey Club Institute for Advanced Study · &lt;a href=&#34;https://ias.hkust.edu.hk/news-media/photo-gallery/architecture&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;IAS gallery ↗&lt;/a&gt;. The graph is AI enhanced for style.&lt;/p&gt;&lt;/div&gt;
 &lt;p class=&#34;space-eyebrow space-event-title&#34;&gt;HONG KONG · 2026&lt;/p&gt;
 &lt;h2&gt;Asian SPACE Workshop&lt;/h2&gt;
 &lt;p class=&#34;space-workshop-expansion&#34;&gt;Spatial and Political Analysis of the Contemporary Economy&lt;/p&gt;
