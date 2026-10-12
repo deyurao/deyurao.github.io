@@ -744,6 +744,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
 @media(prefers-color-scheme:dark){.space26:not([data-space-theme]) .space-venue-map-link {color:#7bded3;}}
 .space26 .space-hero-photo img { margin: 0; }
 .space26 .space-hero-caption { margin: .12rem 0 0; }
+.space26 .space-hero { padding-top: .9rem; }
 .space26 .space-table-scroll { width: 100%; overflow-x: auto; }
 .space26 table.space-table { display: table; width: 100%; max-width: 100%; overflow: visible; margin-bottom: 0; }
 &lt;/style&gt;
