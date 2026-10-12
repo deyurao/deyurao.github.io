@@ -571,50 +571,31 @@
   }
 
    
-  html:has(.space26[data-space-theme="dark"]) .author-card .card-title,
-  html:has(.space26[data-space-theme="dark"]) .author-card .card-title a,
-  html:has(.space26[data-space-theme="dark"]) .author-card h5,
-  html:has(.space26[data-space-theme="dark"]) .author-card h6,
-  html:has(.space26[data-space-theme="dark"]) ul.share li a,
-  html:has(.space26[data-space-theme="dark"]) .author-card .network-icon a {
-    color: #e5edf6;
+  html:has(.space26) .author-card .card-title,
+  html:has(.space26) .author-card .card-title a,
+  html:has(.space26) .author-card h5,
+  html:has(.space26) .author-card h6,
+  html:has(.space26) .author-card .card-subtitle,
+  html:has(.space26) .author-card .card-text,
+  html:has(.space26) ul.share li a,
+  html:has(.space26) .author-card .network-icon a,
+  html:has(.space26) .site-footer,
+  html:has(.space26) .site-footer p,
+  html:has(.space26) .site-footer a,
+  html:has(.space26) footer.site-footer a.back-to-top,
+  html:has(.space26) footer.site-footer a.back-to-top i {
+    color: var(--space-shell-fg) !important;
   }
-  html:has(.space26[data-space-theme="dark"]) .author-card .card-subtitle,
-  html:has(.space26[data-space-theme="dark"]) .author-card .card-text,
-  html:has(.space26[data-space-theme="dark"]) .site-footer,
-  html:has(.space26[data-space-theme="dark"]) .site-footer a,
-  html:has(.space26[data-space-theme="dark"]) footer a.back-to-top i {
-    color: #aabace;
-  }
-  html:has(.space26[data-space-theme="dark"]) .author-card .network-icon a:hover,
-  html:has(.space26[data-space-theme="dark"]) ul.share li a:hover,
-  html:has(.space26[data-space-theme="dark"]) .site-footer a:hover {
-    color: #78d6cb;
+  html:has(.space26) .author-card .card-title a:hover,
+  html:has(.space26) .author-card .network-icon a:hover,
+  html:has(.space26) ul.share li a:hover,
+  html:has(.space26) .site-footer a:hover {
+    color: #137c78 !important;
   }
   html:has(.space26[data-space-theme="dark"]) .content-widget-hr {
     border-top-color: #405168;
   }
   @media (prefers-color-scheme: dark) {
-    html:has(.space26:not([data-space-theme])) .author-card .card-title,
-    html:has(.space26:not([data-space-theme])) .author-card .card-title a,
-    html:has(.space26:not([data-space-theme])) .author-card h5,
-    html:has(.space26:not([data-space-theme])) .author-card h6,
-    html:has(.space26:not([data-space-theme])) ul.share li a,
-    html:has(.space26:not([data-space-theme])) .author-card .network-icon a {
-      color: #e5edf6;
-    }
-    html:has(.space26:not([data-space-theme])) .author-card .card-subtitle,
-    html:has(.space26:not([data-space-theme])) .author-card .card-text,
-    html:has(.space26:not([data-space-theme])) .site-footer,
-    html:has(.space26:not([data-space-theme])) .site-footer a,
-    html:has(.space26:not([data-space-theme])) footer a.back-to-top i {
-      color: #aabace;
-    }
-    html:has(.space26:not([data-space-theme])) .author-card .network-icon a:hover,
-    html:has(.space26:not([data-space-theme])) ul.share li a:hover,
-    html:has(.space26:not([data-space-theme])) .site-footer a:hover {
-      color: #78d6cb;
-    }
     html:has(.space26:not([data-space-theme])) .content-widget-hr {
       border-top-color: #405168;
     }
