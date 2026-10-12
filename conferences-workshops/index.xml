@@ -678,6 +678,8 @@ body:has(.space26) .space26 { margin:0; border:0; }
 .space26 .space-venue-map-link:hover,.space26 .space-venue-map-link:focus-visible {color:var(--space-blue);text-decoration-thickness:2px;}
 .space26[data-space-theme=&#34;dark&#34;] .space-venue-map-link {color:#7bded3;}
 @media(prefers-color-scheme:dark){.space26:not([data-space-theme]) .space-venue-map-link {color:#7bded3;}}
+.space26 .space-hero-photo img { margin: 0; }
+.space26 .space-hero-caption { margin: .12rem 0 0; }
 &lt;/style&gt;
 &lt;div class=&#34;space26&#34;&gt;
 &lt;header class=&#34;space-hero&#34;&gt;&lt;div class=&#34;space-hero-photo&#34;&gt;&lt;div class=&#34;space-theme-controls&#34;&gt;
