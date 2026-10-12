@@ -1189,9 +1189,21 @@ body:has(.space26) .space26 { margin:0; border:0; }
 @media(prefers-color-scheme:dark){.space26:not([data-space-theme]) .space-venue-map-link {color:#7bded3;}}
 </style>
 <div class="space26">
-<header class="space-hero"><div class="space-hero-photo space-photo-pending"><div class="space-theme-controls">
+<header class="space-hero"><div class="space-hero-photo"><div class="space-theme-controls">
 <button aria-label="Switch to dark mode" class="space-theme-toggle" title="Switch to dark mode" type="button"><span aria-hidden="true" class="space-theme-icon">☾</span></button>
-</div><img alt="HKUST Jockey Club Institute for Advanced Study building exterior at sunset" loading="eager" referrerpolicy="no-referrer" src="https://ias.hkust.edu.hk/sites/default/files/photo_gallery/Architecture/images/pic7a_900x600.jpg" onerror="this.closest('.space-hero-photo').classList.remove('space-photo-pending');this.closest('.space-hero-photo').classList.add('space-photo-unavailable')" onload="this.closest('.space-hero-photo').classList.remove('space-photo-pending','space-photo-unavailable')"/><div class="space-photo-fallback" role="status">IAS building photo unavailable in this preview. <a href="https://ias.hkust.edu.hk/news-media/photo-gallery/architecture" target="_blank" rel="noopener" style="margin-left:.4rem">View official IAS photo gallery ↗</a></div><p class="space-hero-caption">HKUST Jockey Club Institute for Advanced Study · <a href="https://ias.hkust.edu.hk/news-media/photo-gallery/architecture" rel="noopener" target="_blank">Official IAS architecture gallery ↗</a></p></div>
+</div><img id="space-hero-art" alt="Illustrated view of the HKUST Jockey Club Institute for Advanced Study" loading="eager" onerror="this.closest('.space-hero-photo').classList.add('space-photo-unavailable')" onload="this.closest('.space-hero-photo').classList.remove('space-photo-unavailable')"/><script>
+(function () {
+  var art = [
+    "/images/space-2026/ias-watercolor.jpg",
+    "/images/space-2026/ias-pencil.jpg",
+    "/images/space-2026/ias-oil.jpg",
+    "/images/space-2026/ias-line.jpg"
+  ];
+  var img = document.getElementById("space-hero-art");
+  if (!img) return;
+  img.src = art[Math.floor(Math.random() * art.length)];
+})();
+</script><div class="space-photo-fallback" role="status">Building image unavailable.</div><p class="space-hero-caption">HKUST Jockey Club Institute for Advanced Study</p></div>
 <p class="space-eyebrow space-event-title">HONG KONG · 2026</p>
 <h2>Asian SPACE Workshop</h2>
 <p class="space-workshop-expansion">Spatial and Political Analysis of the Contemporary Economy</p>

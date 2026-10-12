@@ -680,9 +680,21 @@ body:has(.space26) .space26 { margin:0; border:0; }
 @media(prefers-color-scheme:dark){.space26:not([data-space-theme]) .space-venue-map-link {color:#7bded3;}}
 &lt;/style&gt;
 &lt;div class=&#34;space26&#34;&gt;
-&lt;header class=&#34;space-hero&#34;&gt;&lt;div class=&#34;space-hero-photo space-photo-pending&#34;&gt;&lt;div class=&#34;space-theme-controls&#34;&gt;
+&lt;header class=&#34;space-hero&#34;&gt;&lt;div class=&#34;space-hero-photo&#34;&gt;&lt;div class=&#34;space-theme-controls&#34;&gt;
 &lt;button aria-label=&#34;Switch to dark mode&#34; class=&#34;space-theme-toggle&#34; title=&#34;Switch to dark mode&#34; type=&#34;button&#34;&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;space-theme-icon&#34;&gt;☾&lt;/span&gt;&lt;/button&gt;
-&lt;/div&gt;&lt;img alt=&#34;HKUST Jockey Club Institute for Advanced Study building exterior at sunset&#34; loading=&#34;eager&#34; referrerpolicy=&#34;no-referrer&#34; src=&#34;https://ias.hkust.edu.hk/sites/default/files/photo_gallery/Architecture/images/pic7a_900x600.jpg&#34; onerror=&#34;this.closest(&#39;.space-hero-photo&#39;).classList.remove(&#39;space-photo-pending&#39;);this.closest(&#39;.space-hero-photo&#39;).classList.add(&#39;space-photo-unavailable&#39;)&#34; onload=&#34;this.closest(&#39;.space-hero-photo&#39;).classList.remove(&#39;space-photo-pending&#39;,&#39;space-photo-unavailable&#39;)&#34;/&gt;&lt;div class=&#34;space-photo-fallback&#34; role=&#34;status&#34;&gt;IAS building photo unavailable in this preview. &lt;a href=&#34;https://ias.hkust.edu.hk/news-media/photo-gallery/architecture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; style=&#34;margin-left:.4rem&#34;&gt;View official IAS photo gallery ↗&lt;/a&gt;&lt;/div&gt;&lt;p class=&#34;space-hero-caption&#34;&gt;HKUST Jockey Club Institute for Advanced Study · &lt;a href=&#34;https://ias.hkust.edu.hk/news-media/photo-gallery/architecture&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official IAS architecture gallery ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;img id=&#34;space-hero-art&#34; alt=&#34;Illustrated view of the HKUST Jockey Club Institute for Advanced Study&#34; loading=&#34;eager&#34; onerror=&#34;this.closest(&#39;.space-hero-photo&#39;).classList.add(&#39;space-photo-unavailable&#39;)&#34; onload=&#34;this.closest(&#39;.space-hero-photo&#39;).classList.remove(&#39;space-photo-unavailable&#39;)&#34;/&gt;&lt;script&gt;
+(function () {
+  var art = [
+    &#34;/images/space-2026/ias-watercolor.jpg&#34;,
+    &#34;/images/space-2026/ias-pencil.jpg&#34;,
+    &#34;/images/space-2026/ias-oil.jpg&#34;,
+    &#34;/images/space-2026/ias-line.jpg&#34;
+  ];
+  var img = document.getElementById(&#34;space-hero-art&#34;);
+  if (!img) return;
+  img.src = art[Math.floor(Math.random() * art.length)];
+})();
+&lt;/script&gt;&lt;div class=&#34;space-photo-fallback&#34; role=&#34;status&#34;&gt;Building image unavailable.&lt;/div&gt;&lt;p class=&#34;space-hero-caption&#34;&gt;HKUST Jockey Club Institute for Advanced Study&lt;/p&gt;&lt;/div&gt;
 &lt;p class=&#34;space-eyebrow space-event-title&#34;&gt;HONG KONG · 2026&lt;/p&gt;
 &lt;h2&gt;Asian SPACE Workshop&lt;/h2&gt;
 &lt;p class=&#34;space-workshop-expansion&#34;&gt;Spatial and Political Analysis of the Contemporary Economy&lt;/p&gt;
