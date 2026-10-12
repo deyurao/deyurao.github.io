@@ -1479,143 +1479,6 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
 <div class="space-hotel" data-stay="wm"><h4>WM Hotel</h4><p class="space-small">Sai Kung · relatively remote</p><p>On the Sai Kung waterfront, away from the MTR; about 15–25 minutes by taxi to IAS, estimated fare <strong>HK$80–120</strong>.</p><p><a href="https://www.wmhotel.hk/en/" rel="noopener" target="_blank">Official hotel website ↗</a></p><p class="space-route-links"><a class="space-map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=WM+Hotel%2C+28+Wai+Man+Road%2C+Sai+Kung%2C+Hong+Kong&amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;travelmode=driving" rel="noopener" target="_blank">Hotel → IAS taxi route ↗</a></p></div>
 </div>
 <p class="space-small">These are suggested hotels, not negotiated workshop rates. Taxi costs are estimates for a one-way journey to the IAS Building; actual fares depend on the meter, route, traffic and applicable charges. Uber is also available for travel between hotels and campus.</p>
-<script>
-(function () {
-  var venue = { name: "IAS Building", lat: 22.3328162, lng: 114.2663144 };
-  var stays = [
-    { id: "royal", name: "The Royal Garden Kowloon East", lat: 22.3085321, lng: 114.2599349 },
-    { id: "nina", name: "Nina Hotel Kowloon East", lat: 22.3141868, lng: 114.2190244 },
-    { id: "holiday", name: "Holiday Inn Express Kowloon CBD2", lat: 22.3127575, lng: 114.2230564 },
-    { id: "dorsett", name: "Dorsett Kwun Tong", lat: 22.3079847, lng: 114.2242187 },
-    { id: "cozi", name: "Hotel COZi Harbour View", lat: 22.3121370, lng: 114.2196845 },
-    { id: "wm", name: "WM Hotel, Sai Kung", lat: 22.3858292, lng: 114.2758804 }
-  ];
-  var routes = {};
-  var activeId = null;
-  var map, tiles, routeLine;
-<p>function isDark() {
-var root = document.querySelector(&quot;.space26&quot;);
-var theme = root &amp;&amp; root.getAttribute(&ldquo;data-space-theme&rdquo;);
-if (theme === &ldquo;dark&rdquo;) return true;
-if (theme === &ldquo;light&rdquo;) return false;
-return window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;).matches;
-}</p>
-<p>function tileUrl() {
-return isDark()
-? &ldquo;https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png&rdquo;
-: &ldquo;https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png&rdquo;;
-}</p>
-<p>function paintRoute(id) {
-activeId = id;
-document.querySelectorAll(&quot;.space26 .space-hotel&quot;).forEach(function (card) {
-card.classList.toggle(&ldquo;is-routed&rdquo;, card.getAttribute(&ldquo;data-stay&rdquo;) === id);
-});
-stays.forEach(function (stay) {
-if (!stay.marker) return;
-var on = stay.id === id;
-stay.marker.setStyle({
-radius: on ? 9 : 6,
-fillColor: on ? &ldquo;#137c78&rdquo; : &ldquo;#1e4f86&rdquo;,
-color: &ldquo;#ffffff&rdquo;,
-weight: 2,
-fillOpacity: 1
-});
-});
-if (routeLine) routeLine.setLatLngs(routes[id] || []);
-}</p>
-<p>function clearRoute() {
-activeId = null;
-document.querySelectorAll(&quot;.space26 .space-hotel.is-routed&quot;).forEach(function (card) {
-card.classList.remove(&ldquo;is-routed&rdquo;);
-});
-stays.forEach(function (stay) {
-if (!stay.marker) return;
-stay.marker.setStyle({ radius: 6, fillColor: &ldquo;#1e4f86&rdquo;, color: &ldquo;#ffffff&rdquo;, weight: 2, fillOpacity: 1 });
-});
-if (routeLine) routeLine.setLatLngs([]);
-}</p>
-<p>function loadRoute(stay) {
-var url = &ldquo;
-<a href="https://router.project-osrm.org/route/v1/driving/%22" target="_blank" rel="noopener">https://router.project-osrm.org/route/v1/driving/"</a> +
-stay.lng + &ldquo;,&rdquo; + stay.lat + &ldquo;;&rdquo; + venue.lng + &ldquo;,&rdquo; + venue.lat +
-&ldquo;?overview=full&amp;geometries=geojson&rdquo;;
-fetch(url).then(function (response) { return response.json(); }).then(function (data) {
-var coords = data &amp;&amp; data.routes &amp;&amp; data.routes[0] &amp;&amp; data.routes[0].geometry &amp;&amp; data.routes[0].geometry.coordinates;
-if (!coords) return;
-routes[stay.id] = coords.map(function (pair) { return [pair[1], pair[0]]; });
-if (activeId === stay.id &amp;&amp; routeLine) routeLine.setLatLngs(routes[stay.id]);
-}).catch(function () {});
-}</p>
-<p>function boot() {
-var el = document.getElementById(&ldquo;space-stay-map&rdquo;);
-if (!el || !window.L || el.getAttribute(&ldquo;data-ready&rdquo;)) return;
-el.setAttribute(&ldquo;data-ready&rdquo;, &ldquo;1&rdquo;);
-map = L.map(el, { scrollWheelZoom: false });
-tiles = L.tileLayer(tileUrl(), {
-attribution: &lsquo;© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>&rsquo;,
-subdomains: &ldquo;abcd&rdquo;,
-maxZoom: 19
-}).addTo(map);
-routeLine = L.polyline([], { color: &ldquo;#137c78&rdquo;, weight: 5, opacity: 0.92 }).addTo(map);
-var points = [[venue.lat, venue.lng]];
-L.circleMarker([venue.lat, venue.lng], {
-radius: 10, color: &ldquo;#083f3c&rdquo;, weight: 2, fillColor: &ldquo;#137c78&rdquo;, fillOpacity: 1
-}).addTo(map).bindTooltip(&ldquo;IAS Building&rdquo;, { permanent: true, direction: &ldquo;top&rdquo;, offset: [0, -10] });
-stays.forEach(function (stay) {
-points.push([stay.lat, stay.lng]);
-stay.marker = L.circleMarker([stay.lat, stay.lng], {
-radius: 6, color: &ldquo;#ffffff&rdquo;, weight: 2, fillColor: &ldquo;#1e4f86&rdquo;, fillOpacity: 1
-}).addTo(map);
-stay.marker.bindTooltip(stay.name, { direction: &ldquo;top&rdquo;, offset: [0, -6] });
-stay.marker.on(&ldquo;mouseover&rdquo;, function () { paintRoute(stay.id); });
-stay.marker.on(&ldquo;mouseout&rdquo;, clearRoute);
-stay.marker.on(&ldquo;click&rdquo;, function () { paintRoute(stay.id); });
-loadRoute(stay);
-});
-var bounds = L.latLngBounds(points);
-function fit() {
-map.invalidateSize();
-map.fitBounds(bounds, { padding: [28, 28] });
-}
-fit();
-var section = document.getElementById(&ldquo;space-hotels&rdquo;);
-var details = section &amp;&amp; section.querySelector(&ldquo;details&rdquo;);
-if (details) details.addEventListener(&ldquo;toggle&rdquo;, function () { if (details.open) setTimeout(fit, 40); });
-document.querySelectorAll(&quot;.space26 .space-hotel[data-stay]&rdquo;).forEach(function (card) {
-var id = card.getAttribute(&ldquo;data-stay&rdquo;);
-card.addEventListener(&ldquo;mouseenter&rdquo;, function () { paintRoute(id); });
-card.addEventListener(&ldquo;mouseleave&rdquo;, clearRoute);
-card.addEventListener(&ldquo;focusin&rdquo;, function () { paintRoute(id); });
-card.addEventListener(&ldquo;focusout&rdquo;, function (event) {
-if (!card.contains(event.relatedTarget)) clearRoute();
-});
-});
-var root = document.querySelector(&quot;.space26&quot;);
-if (root &amp;&amp; window.MutationObserver) {
-new MutationObserver(function () {
-if (tiles) tiles.setUrl(tileUrl());
-}).observe(root, { attributes: true, attributeFilter: [&ldquo;data-space-theme&rdquo;] });
-}
-if (window.matchMedia) {
-window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;).addEventListener(&ldquo;change&rdquo;, function () {
-if (tiles) tiles.setUrl(tileUrl());
-});
-}
-}</p>
-<p>function start() {
-if (window.L) { boot(); return; }
-var script = document.createElement(&ldquo;script&rdquo;);
-script.src = &ldquo;
-<a href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js%22;" target="_blank" rel="noopener">https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";</a>
-script.integrity = &ldquo;sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=&rdquo;;
-script.crossOrigin = &ldquo;anonymous&rdquo;;
-script.onload = boot;
-document.head.appendChild(script);
-}
-if (document.readyState === &ldquo;loading&rdquo;) document.addEventListener(&ldquo;DOMContentLoaded&rdquo;, start);
-else start();
-})();
-</script></p>
 </div></details></section>
 <section aria-labelledby="space-weather-title" class="space-fold-section" id="space-weather"><details class="space-fold space-main-fold"><summary class="space-fold-heading"><h2 class="space-section space-fold-title" id="space-weather-title">Weather in Hong Kong</h2></summary><div class="space-fold-content">
 <p>November is generally mild and relatively dry in Hong Kong. Based on the Hong Kong Observatory’s 1991–2020 climate normals, the <strong>average daily high is 24.5°C (76°F)</strong> and the <strong>average daily low is 20.3°C (69°F)</strong>. Average November rainfall is <strong>39.3 mm (1.5 in)</strong>, with <strong>5.7 days of measurable rain</strong>.</p>
@@ -1639,6 +1502,141 @@ else start();
 <p>For workshop enquiries: <a href="mailto:dyrao@ust.hk?subject=Asian%20SPACE%20Workshop%202026">dyrao@ust.hk</a>.</p><p class="space-small space-past-workshops space-past-workshops-footer">Previous regional SPACE workshops: <a href="https://www.shine.sjtu.edu.cn/shine/forums/86229.html" rel="noopener" target="_blank">Osaka University (2024)</a> <span aria-hidden="true">·</span> <a href="https://cures.hias.hit-u.ac.jp/en/event/20251031/" rel="noopener" target="_blank">Hitotsubashi University (2025)</a></p>
 <p class="space-small">Last updated: October 12, 2026. The program, logistics, and accommodation suggestions are subject to change.</p>
 </div></details></section>
+<script>
+(function () {
+  var venue = { name: "IAS Building", lat: 22.3328162, lng: 114.2663144 };
+  var stays = [
+    { id: "royal", name: "The Royal Garden Kowloon East", lat: 22.3085321, lng: 114.2599349 },
+    { id: "nina", name: "Nina Hotel Kowloon East", lat: 22.3141868, lng: 114.2190244 },
+    { id: "holiday", name: "Holiday Inn Express Kowloon CBD2", lat: 22.3127575, lng: 114.2230564 },
+    { id: "dorsett", name: "Dorsett Kwun Tong", lat: 22.3079847, lng: 114.2242187 },
+    { id: "cozi", name: "Hotel COZi Harbour View", lat: 22.3121370, lng: 114.2196845 },
+    { id: "wm", name: "WM Hotel, Sai Kung", lat: 22.3858292, lng: 114.2758804 }
+  ];
+  var routes = {};
+  var activeId = null;
+  var map, tiles, routeLine;
+  function isDark() {
+    var root = document.querySelector(".space26");
+    var theme = root && root.getAttribute("data-space-theme");
+    if (theme === "dark") return true;
+    if (theme === "light") return false;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function tileUrl() {
+    return isDark()
+      ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+      : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+  }
+  function paintRoute(id) {
+    activeId = id;
+    document.querySelectorAll(".space26 .space-hotel").forEach(function (card) {
+      card.classList.toggle("is-routed", card.getAttribute("data-stay") === id);
+    });
+    stays.forEach(function (stay) {
+      if (!stay.marker) return;
+      var on = stay.id === id;
+      stay.marker.setStyle({
+        radius: on ? 9 : 6,
+        fillColor: on ? "#137c78" : "#1e4f86",
+        color: "#ffffff",
+        weight: 2,
+        fillOpacity: 1
+      });
+    });
+    if (routeLine) routeLine.setLatLngs(routes[id] || []);
+  }
+  function clearRoute() {
+    activeId = null;
+    document.querySelectorAll(".space26 .space-hotel.is-routed").forEach(function (card) {
+      card.classList.remove("is-routed");
+    });
+    stays.forEach(function (stay) {
+      if (!stay.marker) return;
+      stay.marker.setStyle({ radius: 6, fillColor: "#1e4f86", color: "#ffffff", weight: 2, fillOpacity: 1 });
+    });
+    if (routeLine) routeLine.setLatLngs([]);
+  }
+  function loadRoute(stay) {
+    var url = "https://router.project-osrm.org/route/v1/driving/" +
+      stay.lng + "," + stay.lat + ";" + venue.lng + "," + venue.lat +
+      "?overview=full&geometries=geojson";
+    fetch(url).then(function (response) { return response.json(); }).then(function (data) {
+      var coords = data && data.routes && data.routes[0] && data.routes[0].geometry && data.routes[0].geometry.coordinates;
+      if (!coords) return;
+      routes[stay.id] = coords.map(function (pair) { return [pair[1], pair[0]]; });
+      if (activeId === stay.id && routeLine) routeLine.setLatLngs(routes[stay.id]);
+    }).catch(function () {});
+  }
+  function boot() {
+    var el = document.getElementById("space-stay-map");
+    if (!el || !window.L || el.getAttribute("data-ready")) return;
+    el.setAttribute("data-ready", "1");
+    map = L.map(el, { scrollWheelZoom: false });
+    tiles = L.tileLayer(tileUrl(), {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: "abcd",
+      maxZoom: 19
+    }).addTo(map);
+    routeLine = L.polyline([], { color: "#137c78", weight: 5, opacity: 0.92 }).addTo(map);
+    var points = [[venue.lat, venue.lng]];
+    L.circleMarker([venue.lat, venue.lng], {
+      radius: 10, color: "#083f3c", weight: 2, fillColor: "#137c78", fillOpacity: 1
+    }).addTo(map).bindTooltip("IAS Building", { permanent: true, direction: "top", offset: [0, -10] });
+    stays.forEach(function (stay) {
+      points.push([stay.lat, stay.lng]);
+      stay.marker = L.circleMarker([stay.lat, stay.lng], {
+        radius: 6, color: "#ffffff", weight: 2, fillColor: "#1e4f86", fillOpacity: 1
+      }).addTo(map);
+      stay.marker.bindTooltip(stay.name, { direction: "top", offset: [0, -6] });
+      stay.marker.on("mouseover", function () { paintRoute(stay.id); });
+      stay.marker.on("mouseout", clearRoute);
+      stay.marker.on("click", function () { paintRoute(stay.id); });
+      loadRoute(stay);
+    });
+    var bounds = L.latLngBounds(points);
+    function fit() {
+      map.invalidateSize();
+      map.fitBounds(bounds, { padding: [28, 28] });
+    }
+    fit();
+    var section = document.getElementById("space-hotels");
+    var details = section && section.querySelector("details");
+    if (details) details.addEventListener("toggle", function () { if (details.open) setTimeout(fit, 40); });
+    document.querySelectorAll(".space26 .space-hotel[data-stay]").forEach(function (card) {
+      var id = card.getAttribute("data-stay");
+      card.addEventListener("mouseenter", function () { paintRoute(id); });
+      card.addEventListener("mouseleave", clearRoute);
+      card.addEventListener("focusin", function () { paintRoute(id); });
+      card.addEventListener("focusout", function (event) {
+        if (!card.contains(event.relatedTarget)) clearRoute();
+      });
+    });
+    var root = document.querySelector(".space26");
+    if (root && window.MutationObserver) {
+      new MutationObserver(function () {
+        if (tiles) tiles.setUrl(tileUrl());
+      }).observe(root, { attributes: true, attributeFilter: ["data-space-theme"] });
+    }
+    if (window.matchMedia) {
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+        if (tiles) tiles.setUrl(tileUrl());
+      });
+    }
+  }
+  function start() {
+    if (window.L) { boot(); return; }
+    var script = document.createElement("script");
+    script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+    script.integrity = "sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=";
+    script.crossOrigin = "anonymous";
+    script.onload = boot;
+    document.head.appendChild(script);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
+})();
+</script>
 </div>
 <script>
 (function () {
