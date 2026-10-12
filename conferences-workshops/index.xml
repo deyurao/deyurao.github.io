@@ -53,6 +53,9 @@
 .space26 .space-hotel { padding: .85rem 1rem; border: 1px solid var(--space-border); border-radius: .38rem; background: #fff; }
 .space26 .space-hotel h4 { margin: 0 0 .3rem; font-size: 1rem; color: var(--space-blue); }
 .space26 .space-hotel p { margin: .2rem 0 .45rem; font-size: .9rem; }
+.space26 .space-stay-map { height: min(460px, 72vw); min-height: 300px; margin: .15rem 0 .55rem; border: 1px solid var(--space-border); border-radius: .45rem; overflow: hidden; position: relative; z-index: 0; background: var(--space-bg); }
+.space26 .space-map-note { margin: 0 0 .9rem; }
+.space26 .space-hotel.is-routed { border-color: #137c78; box-shadow: inset 0 0 0 1px #137c78; }
 .space26 .space-small { font-size: .88rem; color: var(--space-muted); }
 .space26 a:focus-visible { outline: 2px solid var(--space-teal); outline-offset: 2px; }
 @media (max-width: 570px) { .space26 .space-actions { display: grid; } .space26 .space-action { text-align: center; } .space26 .space-facts span { border-radius: .5rem; } }
@@ -875,16 +878,156 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
 &lt;p&gt;The &lt;a href=&#34;https://www.conferencelodge.hk/en/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Li Dak Sum Yip Yio Chin Kenneth Li Conference Lodge ↗&lt;/a&gt; is within a short walk of the IAS Building. It is the most convenient option for participants. Workshop-related room booking enquiries &lt;strong&gt;must go through HKUST faculty or staff&lt;/strong&gt;; participants may contact the local organizer at &lt;a href=&#34;mailto:dyrao@ust.hk?subject=SPACE%202026%20Conference%20Lodge%20enquiry&#34;&gt;dyrao@ust.hk&lt;/a&gt; for assistance. Reservations are subject to availability.&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Conference+Lodge+HKUST%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=walking&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Conference Lodge → IAS walking directions ↗&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;space-softnote&#34;&gt;&lt;strong&gt;Important availability note (as of October 11, 2026):&lt;/strong&gt; The Conference Lodge is fully booked for the night of Saturday, November 7. Participants needing accommodation that night should plan for an off-campus hotel unless the organizer confirms a room has become available.&lt;/div&gt;
 &lt;h3&gt;Nearby off-campus hotels&lt;/h3&gt;
-&lt;p&gt;We suggest hotels in &lt;strong&gt;Sai Kung&lt;/strong&gt;, &lt;strong&gt;Tseung Kwan O&lt;/strong&gt;, or &lt;strong&gt;Kwun Tong / East Kowloon&lt;/strong&gt;. Sai Kung and Tseung Kwan O are generally closest to HKUST; Kwun Tong offers more choice in Kowloon East. Please book directly with the hotels. Rates and availability vary, particularly on the workshop weekend.&lt;/p&gt;
+&lt;p&gt;We suggest hotels in &lt;strong&gt;Tseung Kwan O&lt;/strong&gt; or &lt;strong&gt;Kwun Tong / East Kowloon&lt;/strong&gt;, and also &lt;strong&gt;Sai Kung&lt;/strong&gt;. Tseung Kwan O is generally the closest off-campus base, and Kwun Tong offers more choice in Kowloon East. Sai Kung is relatively remote: it is on the waterfront, away from the MTR, so a taxi is the practical way to campus. Please book directly with the hotels. Rates and availability vary, particularly on the workshop weekend.&lt;/p&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34; integrity=&#34;sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=&#34; crossorigin=&#34;&#34;&gt;
+&lt;div id=&#34;space-stay-map&#34; class=&#34;space-stay-map&#34; role=&#34;region&#34; aria-label=&#34;Map of the IAS Building and suggested hotels&#34;&gt;&lt;/div&gt;
+&lt;p class=&#34;space-small space-map-note&#34;&gt;OpenStreetMap of the workshop venue and suggested hotels. Point at a hotel to show a driving route to the IAS Building. The line follows public roads and is not a fare quote.&lt;/p&gt;
 &lt;div class=&#34;space-grid&#34;&gt;
-&lt;div class=&#34;space-hotel&#34;&gt;&lt;h4&gt;The Royal Garden Kowloon East&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Tseung Kwan O · closest off-campus option&lt;/p&gt;&lt;p&gt;About 10–15 minutes by taxi to IAS; estimated fare &lt;strong&gt;HK$60–90&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://rgke.com.hk/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=The+Royal+Garden+Kowloon+East%2C+Tseung+Kwan+O%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&#34;space-hotel&#34;&gt;&lt;h4&gt;Nina Hotel Kowloon East&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Kwun Tong · near Ngau Tau Kok MTR&lt;/p&gt;&lt;p&gt;About 20–30 minutes by taxi to IAS; estimated fare &lt;strong&gt;HK$110–140&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.ninahotelgroup.com/nina-hotel-kowloon-east/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Nina+Hotel+Kowloon+East%2C+Kwun+Tong%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&#34;space-hotel&#34;&gt;&lt;h4&gt;Holiday Inn Express Hong Kong Kowloon CBD2&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Kwun Tong · near Kwun Tong MTR&lt;/p&gt;&lt;p&gt;In the Kowloon East business district; about 20–35 minutes by taxi to IAS, estimated fare &lt;strong&gt;HK$110–150&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.ihg.com/holidayinnexpress/hotels/gb/en/hong-kong/hkgkk/hoteldetail&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Holiday+Inn+Express+Hong+Kong+Kowloon+CBD2%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&#34;space-hotel&#34;&gt;&lt;h4&gt;Dorsett Kwun Tong&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Kwun Tong · Hung To Road&lt;/p&gt;&lt;p&gt;In Kwun Tong, with dining and public transport nearby; about 20–35 minutes by taxi to IAS, estimated fare &lt;strong&gt;HK$110–150&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.dorsetthotels.com/dorsett-kwun-tong/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Dorsett+Kwun+Tong%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&#34;space-hotel&#34;&gt;&lt;h4&gt;Hotel COZi · Harbour View&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Kwun Tong · near Ngau Tau Kok MTR&lt;/p&gt;&lt;p&gt;Near Wai Yip Street; about 20–30 minutes by taxi to IAS, estimated fare &lt;strong&gt;HK$110–140&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.hotelcozi.com/harbourview/en-gb/home&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Hotel+COZi+Harbour+View%2C+Kwun+Tong%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&#34;space-hotel&#34;&gt;&lt;h4&gt;WM Hotel&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Sai Kung · Wai Man Road&lt;/p&gt;&lt;p&gt;On the Sai Kung waterfront; about 15–25 minutes by taxi to IAS, estimated fare &lt;strong&gt;HK$80–120&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.wmhotel.hk/en/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=WM+Hotel%2C+28+Wai+Man+Road%2C+Sai+Kung%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;space-hotel&#34; data-stay=&#34;royal&#34;&gt;&lt;h4&gt;The Royal Garden Kowloon East&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Tseung Kwan O · closest off-campus option&lt;/p&gt;&lt;p&gt;About 10–15 minutes by taxi to IAS; estimated fare &lt;strong&gt;HK$60–90&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://rgke.com.hk/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=The+Royal+Garden+Kowloon+East%2C+Tseung+Kwan+O%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;space-hotel&#34; data-stay=&#34;nina&#34;&gt;&lt;h4&gt;Nina Hotel Kowloon East&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Kwun Tong · near Ngau Tau Kok MTR&lt;/p&gt;&lt;p&gt;About 20–30 minutes by taxi to IAS; estimated fare &lt;strong&gt;HK$110–140&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.ninahotelgroup.com/nina-hotel-kowloon-east/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Nina+Hotel+Kowloon+East%2C+Kwun+Tong%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;space-hotel&#34; data-stay=&#34;holiday&#34;&gt;&lt;h4&gt;Holiday Inn Express Hong Kong Kowloon CBD2&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Kwun Tong · near Kwun Tong MTR&lt;/p&gt;&lt;p&gt;In the Kowloon East business district; about 20–35 minutes by taxi to IAS, estimated fare &lt;strong&gt;HK$110–150&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.ihg.com/holidayinnexpress/hotels/gb/en/hong-kong/hkgkk/hoteldetail&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Holiday+Inn+Express+Hong+Kong+Kowloon+CBD2%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;space-hotel&#34; data-stay=&#34;dorsett&#34;&gt;&lt;h4&gt;Dorsett Kwun Tong&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Kwun Tong · Hung To Road&lt;/p&gt;&lt;p&gt;In Kwun Tong, with dining and public transport nearby; about 20–35 minutes by taxi to IAS, estimated fare &lt;strong&gt;HK$110–150&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.dorsetthotels.com/dorsett-kwun-tong/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Dorsett+Kwun+Tong%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;space-hotel&#34; data-stay=&#34;cozi&#34;&gt;&lt;h4&gt;Hotel COZi · Harbour View&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Kwun Tong · near Ngau Tau Kok MTR&lt;/p&gt;&lt;p&gt;Near Wai Yip Street; about 20–30 minutes by taxi to IAS, estimated fare &lt;strong&gt;HK$110–140&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.hotelcozi.com/harbourview/en-gb/home&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=Hotel+COZi+Harbour+View%2C+Kwun+Tong%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&#34;space-hotel&#34; data-stay=&#34;wm&#34;&gt;&lt;h4&gt;WM Hotel&lt;/h4&gt;&lt;p class=&#34;space-small&#34;&gt;Sai Kung · relatively remote&lt;/p&gt;&lt;p&gt;On the Sai Kung waterfront, away from the MTR; about 15–25 minutes by taxi to IAS, estimated fare &lt;strong&gt;HK$80–120&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://www.wmhotel.hk/en/&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Official hotel website ↗&lt;/a&gt;&lt;/p&gt;&lt;p class=&#34;space-route-links&#34;&gt;&lt;a class=&#34;space-map-link&#34; href=&#34;https://www.google.com/maps/dir/?api=1&amp;amp;origin=WM+Hotel%2C+28+Wai+Man+Road%2C+Sai+Kung%2C+Hong+Kong&amp;amp;destination=HKUST+Jockey+Club+Institute+for+Advanced+Study%2C+Clear+Water+Bay%2C+Hong+Kong&amp;amp;travelmode=driving&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;Hotel → IAS taxi route ↗&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p class=&#34;space-small&#34;&gt;These are suggested hotels, not negotiated workshop rates. Taxi costs are estimates for a one-way journey to the IAS Building; actual fares depend on the meter, route, traffic and applicable charges. Uber is also available for travel between hotels and campus.&lt;/p&gt;
+&lt;script&gt;
+(function () {
+  var venue = { name: &#34;IAS Building&#34;, lat: 22.3328162, lng: 114.2663144 };
+  var stays = [
+    { id: &#34;royal&#34;, name: &#34;The Royal Garden Kowloon East&#34;, lat: 22.3085321, lng: 114.2599349 },
+    { id: &#34;nina&#34;, name: &#34;Nina Hotel Kowloon East&#34;, lat: 22.3141868, lng: 114.2190244 },
+    { id: &#34;holiday&#34;, name: &#34;Holiday Inn Express Kowloon CBD2&#34;, lat: 22.3127575, lng: 114.2230564 },
+    { id: &#34;dorsett&#34;, name: &#34;Dorsett Kwun Tong&#34;, lat: 22.3079847, lng: 114.2242187 },
+    { id: &#34;cozi&#34;, name: &#34;Hotel COZi Harbour View&#34;, lat: 22.3121370, lng: 114.2196845 },
+    { id: &#34;wm&#34;, name: &#34;WM Hotel, Sai Kung&#34;, lat: 22.3858292, lng: 114.2758804 }
+  ];
+  var routes = {};
+  var activeId = null;
+  var map, tiles, routeLine;
+&lt;p&gt;function isDark() {
+var root = document.querySelector(&amp;quot;.space26&amp;quot;);
+var theme = root &amp;amp;&amp;amp; root.getAttribute(&amp;ldquo;data-space-theme&amp;rdquo;);
+if (theme === &amp;ldquo;dark&amp;rdquo;) return true;
+if (theme === &amp;ldquo;light&amp;rdquo;) return false;
+return window.matchMedia(&amp;quot;(prefers-color-scheme: dark)&amp;quot;).matches;
+}&lt;/p&gt;
+&lt;p&gt;function tileUrl() {
+return isDark()
+? &amp;ldquo;https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png&amp;rdquo;
+: &amp;ldquo;https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png&amp;rdquo;;
+}&lt;/p&gt;
+&lt;p&gt;function paintRoute(id) {
+activeId = id;
+document.querySelectorAll(&amp;quot;.space26 .space-hotel&amp;quot;).forEach(function (card) {
+card.classList.toggle(&amp;ldquo;is-routed&amp;rdquo;, card.getAttribute(&amp;ldquo;data-stay&amp;rdquo;) === id);
+});
+stays.forEach(function (stay) {
+if (!stay.marker) return;
+var on = stay.id === id;
+stay.marker.setStyle({
+radius: on ? 9 : 6,
+fillColor: on ? &amp;ldquo;#137c78&amp;rdquo; : &amp;ldquo;#1e4f86&amp;rdquo;,
+color: &amp;ldquo;#ffffff&amp;rdquo;,
+weight: 2,
+fillOpacity: 1
+});
+});
+if (routeLine) routeLine.setLatLngs(routes[id] || []);
+}&lt;/p&gt;
+&lt;p&gt;function clearRoute() {
+activeId = null;
+document.querySelectorAll(&amp;quot;.space26 .space-hotel.is-routed&amp;quot;).forEach(function (card) {
+card.classList.remove(&amp;ldquo;is-routed&amp;rdquo;);
+});
+stays.forEach(function (stay) {
+if (!stay.marker) return;
+stay.marker.setStyle({ radius: 6, fillColor: &amp;ldquo;#1e4f86&amp;rdquo;, color: &amp;ldquo;#ffffff&amp;rdquo;, weight: 2, fillOpacity: 1 });
+});
+if (routeLine) routeLine.setLatLngs([]);
+}&lt;/p&gt;
+&lt;p&gt;function loadRoute(stay) {
+var url = &amp;ldquo;
+&lt;a href=&#34;https://router.project-osrm.org/route/v1/driving/%22&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://router.project-osrm.org/route/v1/driving/&#34;&lt;/a&gt; +
+stay.lng + &amp;ldquo;,&amp;rdquo; + stay.lat + &amp;ldquo;;&amp;rdquo; + venue.lng + &amp;ldquo;,&amp;rdquo; + venue.lat +
+&amp;ldquo;?overview=full&amp;amp;geometries=geojson&amp;rdquo;;
+fetch(url).then(function (response) { return response.json(); }).then(function (data) {
+var coords = data &amp;amp;&amp;amp; data.routes &amp;amp;&amp;amp; data.routes[0] &amp;amp;&amp;amp; data.routes[0].geometry &amp;amp;&amp;amp; data.routes[0].geometry.coordinates;
+if (!coords) return;
+routes[stay.id] = coords.map(function (pair) { return [pair[1], pair[0]]; });
+if (activeId === stay.id &amp;amp;&amp;amp; routeLine) routeLine.setLatLngs(routes[stay.id]);
+}).catch(function () {});
+}&lt;/p&gt;
+&lt;p&gt;function boot() {
+var el = document.getElementById(&amp;ldquo;space-stay-map&amp;rdquo;);
+if (!el || !window.L || el.getAttribute(&amp;ldquo;data-ready&amp;rdquo;)) return;
+el.setAttribute(&amp;ldquo;data-ready&amp;rdquo;, &amp;ldquo;1&amp;rdquo;);
+map = L.map(el, { scrollWheelZoom: false });
+tiles = L.tileLayer(tileUrl(), {
+attribution: &amp;lsquo;© &lt;a href=&#34;https://www.openstreetmap.org/copyright&#34;&gt;OpenStreetMap&lt;/a&gt; © &lt;a href=&#34;https://carto.com/attributions&#34;&gt;CARTO&lt;/a&gt;&amp;rsquo;,
+subdomains: &amp;ldquo;abcd&amp;rdquo;,
+maxZoom: 19
+}).addTo(map);
+routeLine = L.polyline([], { color: &amp;ldquo;#137c78&amp;rdquo;, weight: 5, opacity: 0.92 }).addTo(map);
+var points = [[venue.lat, venue.lng]];
+L.circleMarker([venue.lat, venue.lng], {
+radius: 10, color: &amp;ldquo;#083f3c&amp;rdquo;, weight: 2, fillColor: &amp;ldquo;#137c78&amp;rdquo;, fillOpacity: 1
+}).addTo(map).bindTooltip(&amp;ldquo;IAS Building&amp;rdquo;, { permanent: true, direction: &amp;ldquo;top&amp;rdquo;, offset: [0, -10] });
+stays.forEach(function (stay) {
+points.push([stay.lat, stay.lng]);
+stay.marker = L.circleMarker([stay.lat, stay.lng], {
+radius: 6, color: &amp;ldquo;#ffffff&amp;rdquo;, weight: 2, fillColor: &amp;ldquo;#1e4f86&amp;rdquo;, fillOpacity: 1
+}).addTo(map);
+stay.marker.bindTooltip(stay.name, { direction: &amp;ldquo;top&amp;rdquo;, offset: [0, -6] });
+stay.marker.on(&amp;ldquo;mouseover&amp;rdquo;, function () { paintRoute(stay.id); });
+stay.marker.on(&amp;ldquo;mouseout&amp;rdquo;, clearRoute);
+stay.marker.on(&amp;ldquo;click&amp;rdquo;, function () { paintRoute(stay.id); });
+loadRoute(stay);
+});
+var bounds = L.latLngBounds(points);
+function fit() {
+map.invalidateSize();
+map.fitBounds(bounds, { padding: [28, 28] });
+}
+fit();
+var section = document.getElementById(&amp;ldquo;space-hotels&amp;rdquo;);
+var details = section &amp;amp;&amp;amp; section.querySelector(&amp;ldquo;details&amp;rdquo;);
+if (details) details.addEventListener(&amp;ldquo;toggle&amp;rdquo;, function () { if (details.open) setTimeout(fit, 40); });
+document.querySelectorAll(&amp;quot;.space26 .space-hotel[data-stay]&amp;rdquo;).forEach(function (card) {
+var id = card.getAttribute(&amp;ldquo;data-stay&amp;rdquo;);
+card.addEventListener(&amp;ldquo;mouseenter&amp;rdquo;, function () { paintRoute(id); });
+card.addEventListener(&amp;ldquo;mouseleave&amp;rdquo;, clearRoute);
+card.addEventListener(&amp;ldquo;focusin&amp;rdquo;, function () { paintRoute(id); });
+card.addEventListener(&amp;ldquo;focusout&amp;rdquo;, function (event) {
+if (!card.contains(event.relatedTarget)) clearRoute();
+});
+});
+var root = document.querySelector(&amp;quot;.space26&amp;quot;);
+if (root &amp;amp;&amp;amp; window.MutationObserver) {
+new MutationObserver(function () {
+if (tiles) tiles.setUrl(tileUrl());
+}).observe(root, { attributes: true, attributeFilter: [&amp;ldquo;data-space-theme&amp;rdquo;] });
+}
+if (window.matchMedia) {
+window.matchMedia(&amp;quot;(prefers-color-scheme: dark)&amp;quot;).addEventListener(&amp;ldquo;change&amp;rdquo;, function () {
+if (tiles) tiles.setUrl(tileUrl());
+});
+}
+}&lt;/p&gt;
+&lt;p&gt;function start() {
+if (window.L) { boot(); return; }
+var script = document.createElement(&amp;ldquo;script&amp;rdquo;);
+script.src = &amp;ldquo;
+&lt;a href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js%22;&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;;&lt;/a&gt;
+script.integrity = &amp;ldquo;sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=&amp;rdquo;;
+script.crossOrigin = &amp;ldquo;anonymous&amp;rdquo;;
+script.onload = boot;
+document.head.appendChild(script);
+}
+if (document.readyState === &amp;ldquo;loading&amp;rdquo;) document.addEventListener(&amp;ldquo;DOMContentLoaded&amp;rdquo;, start);
+else start();
+})();
+&lt;/script&gt;&lt;/p&gt;
 &lt;/div&gt;&lt;/details&gt;&lt;/section&gt;
 &lt;section aria-labelledby=&#34;space-weather-title&#34; class=&#34;space-fold-section&#34; id=&#34;space-weather&#34;&gt;&lt;details class=&#34;space-fold space-main-fold&#34;&gt;&lt;summary class=&#34;space-fold-heading&#34;&gt;&lt;h2 class=&#34;space-section space-fold-title&#34; id=&#34;space-weather-title&#34;&gt;Weather in Hong Kong&lt;/h2&gt;&lt;/summary&gt;&lt;div class=&#34;space-fold-content&#34;&gt;
 &lt;p&gt;November is generally mild and relatively dry in Hong Kong. Based on the Hong Kong Observatory’s 1991–2020 climate normals, the &lt;strong&gt;average daily high is 24.5°C (76°F)&lt;/strong&gt; and the &lt;strong&gt;average daily low is 20.3°C (69°F)&lt;/strong&gt;. Average November rainfall is &lt;strong&gt;39.3 mm (1.5 in)&lt;/strong&gt;, with &lt;strong&gt;5.7 days of measurable rain&lt;/strong&gt;.&lt;/p&gt;
