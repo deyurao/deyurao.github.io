@@ -708,6 +708,30 @@ body:has(.space26) .space26 { margin:0; border:0; }
   .space26 table.space-table td { white-space: normal; overflow-wrap: break-word; }
   .space26 table.space-table .space-time { width: 6.4rem; white-space: nowrap; }
 }
+.space26[data-space-theme=&#34;dark&#34;] .space-localnav a {
+  background: #1a2c42;
+  color: #e5edf6 !important;
+  border-color: #405168;
+}
+.space26[data-space-theme=&#34;dark&#34;] .space-localnav a:hover,
+.space26[data-space-theme=&#34;dark&#34;] .space-localnav a[aria-current=&#34;location&#34;] {
+  background: #243952;
+  color: #e5edf6 !important;
+  border-color: #78d6cb;
+}
+@media (prefers-color-scheme: dark) {
+  .space26:not([data-space-theme=&#34;light&#34;]) .space-localnav a {
+    background: #1a2c42;
+    color: #e5edf6 !important;
+    border-color: #405168;
+  }
+  .space26:not([data-space-theme=&#34;light&#34;]) .space-localnav a:hover,
+  .space26:not([data-space-theme=&#34;light&#34;]) .space-localnav a[aria-current=&#34;location&#34;] {
+    background: #243952;
+    color: #e5edf6 !important;
+    border-color: #78d6cb;
+  }
+}
 &lt;/style&gt;
 &lt;div class=&#34;space26&#34;&gt;
 &lt;header class=&#34;space-hero&#34;&gt;&lt;div class=&#34;space-hero-photo&#34;&gt;&lt;div class=&#34;space-theme-controls&#34;&gt;

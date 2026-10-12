@@ -273,10 +273,39 @@
   
 
 
-  
-
-
-
+  <style>
+   
+  body.dark #navbar-main {
+    background: #121d2b;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, .4);
+  }
+  body.dark #navbar-main .navbar-brand,
+  body.dark #navbar-main .nav-link,
+  body.dark #navbar-main .navbar-nav .nav-link {
+    color: #e5edf6;
+  }
+  body.dark #navbar-main .nav-link.active,
+  body.dark #navbar-main .nav-link:hover,
+  body.dark #navbar-main .nav-link:focus {
+    color: #8eb6ff;
+  }
+  body.dark #navbar-main .navbar-collapse {
+    background-color: #121d2b;
+  }
+  body.dark #navbar-main .dropdown-menu {
+    background: #1a2c42;
+    border-color: #405168;
+  }
+  body.dark #navbar-main .dropdown-item {
+    color: #e5edf6;
+  }
+  body.dark #navbar-main .dropdown-item:hover,
+  body.dark #navbar-main .dropdown-item:focus,
+  body.dark #navbar-main .dropdown-item-active {
+    background: #243952;
+    color: #ffffff;
+  }
+</style>
 
 
   <title>Asian SPACE Workshop · Hong Kong · 2026 | Deyu Rao</title>
@@ -538,6 +567,56 @@
   @media (min-width: 700px) {
     .article-container {
       max-width: 1040px;
+    }
+  }
+
+   
+  html:has(.space26[data-space-theme="dark"]) .author-card .card-title,
+  html:has(.space26[data-space-theme="dark"]) .author-card .card-title a,
+  html:has(.space26[data-space-theme="dark"]) .author-card h5,
+  html:has(.space26[data-space-theme="dark"]) .author-card h6,
+  html:has(.space26[data-space-theme="dark"]) ul.share li a,
+  html:has(.space26[data-space-theme="dark"]) .author-card .network-icon a {
+    color: #e5edf6;
+  }
+  html:has(.space26[data-space-theme="dark"]) .author-card .card-subtitle,
+  html:has(.space26[data-space-theme="dark"]) .author-card .card-text,
+  html:has(.space26[data-space-theme="dark"]) .site-footer,
+  html:has(.space26[data-space-theme="dark"]) .site-footer a,
+  html:has(.space26[data-space-theme="dark"]) footer a.back-to-top i {
+    color: #aabace;
+  }
+  html:has(.space26[data-space-theme="dark"]) .author-card .network-icon a:hover,
+  html:has(.space26[data-space-theme="dark"]) ul.share li a:hover,
+  html:has(.space26[data-space-theme="dark"]) .site-footer a:hover {
+    color: #78d6cb;
+  }
+  html:has(.space26[data-space-theme="dark"]) .content-widget-hr {
+    border-top-color: #405168;
+  }
+  @media (prefers-color-scheme: dark) {
+    html:has(.space26:not([data-space-theme])) .author-card .card-title,
+    html:has(.space26:not([data-space-theme])) .author-card .card-title a,
+    html:has(.space26:not([data-space-theme])) .author-card h5,
+    html:has(.space26:not([data-space-theme])) .author-card h6,
+    html:has(.space26:not([data-space-theme])) ul.share li a,
+    html:has(.space26:not([data-space-theme])) .author-card .network-icon a {
+      color: #e5edf6;
+    }
+    html:has(.space26:not([data-space-theme])) .author-card .card-subtitle,
+    html:has(.space26:not([data-space-theme])) .author-card .card-text,
+    html:has(.space26:not([data-space-theme])) .site-footer,
+    html:has(.space26:not([data-space-theme])) .site-footer a,
+    html:has(.space26:not([data-space-theme])) footer a.back-to-top i {
+      color: #aabace;
+    }
+    html:has(.space26:not([data-space-theme])) .author-card .network-icon a:hover,
+    html:has(.space26:not([data-space-theme])) ul.share li a:hover,
+    html:has(.space26:not([data-space-theme])) .site-footer a:hover {
+      color: #78d6cb;
+    }
+    html:has(.space26:not([data-space-theme])) .content-widget-hr {
+      border-top-color: #405168;
     }
   }
 </style>
@@ -1235,6 +1314,30 @@ body:has(.space26) .space26 { margin:0; border:0; }
   .space26 table.space-table th,
   .space26 table.space-table td { white-space: normal; overflow-wrap: break-word; }
   .space26 table.space-table .space-time { width: 6.4rem; white-space: nowrap; }
+}
+.space26[data-space-theme="dark"] .space-localnav a {
+  background: #1a2c42;
+  color: #e5edf6 !important;
+  border-color: #405168;
+}
+.space26[data-space-theme="dark"] .space-localnav a:hover,
+.space26[data-space-theme="dark"] .space-localnav a[aria-current="location"] {
+  background: #243952;
+  color: #e5edf6 !important;
+  border-color: #78d6cb;
+}
+@media (prefers-color-scheme: dark) {
+  .space26:not([data-space-theme="light"]) .space-localnav a {
+    background: #1a2c42;
+    color: #e5edf6 !important;
+    border-color: #405168;
+  }
+  .space26:not([data-space-theme="light"]) .space-localnav a:hover,
+  .space26:not([data-space-theme="light"]) .space-localnav a[aria-current="location"] {
+    background: #243952;
+    color: #e5edf6 !important;
+    border-color: #78d6cb;
+  }
 }
 </style>
 <div class="space26">
