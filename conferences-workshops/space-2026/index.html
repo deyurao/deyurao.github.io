@@ -642,6 +642,10 @@
 .space26 .space-hotel h4 { margin: 0 0 .3rem; font-size: 1rem; color: var(--space-blue); }
 .space26 .space-hotel p { margin: .2rem 0 .45rem; font-size: .9rem; }
 .space26 .space-stay-map { height: min(460px, 72vw); min-height: 300px; margin: .15rem 0 .55rem; border: 1px solid var(--space-border); border-radius: .45rem; overflow: hidden; position: relative; z-index: 0; background: var(--space-bg); }
+.space26[data-space-theme="dark"] .space-stay-map .leaflet-tile-pane { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+@media (prefers-color-scheme: dark) {
+  .space26:not([data-space-theme]) .space-stay-map .leaflet-tile-pane { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+}
 .space26 .space-map-note { margin: 0 0 .9rem; }
 .space26 .space-hotel.is-routed { border-color: #137c78; box-shadow: inset 0 0 0 1px #137c78; }
 .space26 .space-small { font-size: .88rem; color: var(--space-muted); }
@@ -1524,9 +1528,7 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
   function tileUrl() {
-    return isDark()
-      ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-      : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+    return "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
   }
   function paintRoute(id) {
     activeId = id;
@@ -1574,8 +1576,7 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
     el.setAttribute("data-ready", "1");
     map = L.map(el, { scrollWheelZoom: false });
     tiles = L.tileLayer(tileUrl(), {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: "abcd",
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       maxZoom: 19
     }).addTo(map);
     routeLine = L.polyline([], { color: "#137c78", weight: 5, opacity: 0.92 }).addTo(map);
