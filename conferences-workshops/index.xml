@@ -131,7 +131,7 @@
 .space26 .space-supporters { grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.28fr) minmax(0, 1.15fr); gap: .6rem; }
 .space26 .space-supporter { background: #fff; border-color: #d3dfec; padding: .7rem .85rem; min-height: 120px; }
 .space26 .space-supporter-econ img { max-height: 102px; width: 100%; max-width: 440px; object-fit: contain; }
-.space26 .space-supporter-ceg img { max-height: 78px; width: 88%; max-width: 88%; object-fit: contain; }
+.space26 .space-supporter-ceg img { max-height: 66px; width: 75%; max-width: 75%; object-fit: contain; }
 .space26 .space-ias-logos { display: flex; align-items: center; gap: .35rem; }
 .space26 .space-ias-logos &gt; a { display: flex; align-items: center; justify-content: center; min-width: 0; padding: .15rem; border-radius: .3rem; }
 .space26 .space-ias-logos &gt; a:first-child { flex: 0 1 46%; }
@@ -699,7 +699,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
 .space26 .space-supporter { min-height: 0; padding: 0 .4rem; }
 .space26 .space-ias-logos { min-height: 0; }
 .space26 .space-supporter-econ img { height: 111px; max-height: 111px; width: auto; max-width: 100%; }
-.space26 .space-supporter-ceg img { height: auto; max-height: 78px; width: 88%; max-width: 88%; object-fit: contain; }
+.space26 .space-supporter-ceg img { height: auto; max-height: 66px; width: 75%; max-width: 75%; object-fit: contain; }
 .space26 .space-ias-logos &gt; a,
 .space26 .space-ias-logos &gt; a:first-child,
 .space26 .space-ias-logos &gt; a:last-child { height: 111px; }
@@ -709,7 +709,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
 @media (max-width:700px) {
   .space26 .space-supporter { min-height: 0; padding: 0 .3rem; }
   .space26 .space-supporter-econ img { height: 98px; max-height: 98px; }
-  .space26 .space-supporter-ceg img { max-height: 68px; width: 86%; max-width: 86%; }
+  .space26 .space-supporter-ceg img { max-height: 58px; width: 73%; max-width: 73%; }
   .space26 .space-ias-logos &gt; a:first-child,
   .space26 .space-ias-logos &gt; a:last-child { height: 98px; }
   .space26 .space-ias-logos img,
