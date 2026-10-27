@@ -609,7 +609,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
  .space26 .space-localnav a {flex:1 1 calc(50% - .5rem);font-size:.77rem;padding:.56rem .42rem;white-space:normal;}
 }
 /* v29: sponsor event cards; registration first and opposite emphasis in dark mode. */
-.space26 .space-event-summary {grid-template-columns:minmax(0,.82fr) minmax(0,.94fr) minmax(0,1.34fr);}
+.space26 .space-event-summary {grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);}
 .space26 .space-event-date,.space26 .space-event-detail {background:var(--space-bg);color:var(--space-text);border:1px solid var(--space-border);}
 .space26 .space-event-date .space-card-label,.space26 .space-event-detail .space-card-label {color:var(--space-muted);}
 .space26 .space-event-register {justify-content:center;align-items:center;text-align:center;background:#153e63;border:1px solid #204e77;color:#fff;}
@@ -623,8 +623,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
 }
 @media (max-width:850px) {
  .space26 .space-event-summary {grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
- .space26 .space-event-register {grid-column:auto;min-height:130px;}
- .space26 .space-event-detail {grid-column:1/-1;min-height:125px;}
+ .space26 .space-event-detail {grid-column:auto;min-height:125px;}
 }
 @media (max-width:590px) {
  .space26 .space-event-summary {grid-template-columns:1fr;}
@@ -842,10 +841,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
 &lt;p class=&#34;space-eyebrow space-event-title&#34;&gt;HONG KONG · 2026&lt;/p&gt;
 &lt;h2&gt;Asian SPACE Workshop&lt;/h2&gt;
 &lt;p class=&#34;space-workshop-expansion&#34;&gt;Spatial and Political Analysis of the Contemporary Economy&lt;/p&gt;
-&lt;div class=&#34;space-event-summary&#34; aria-label=&#34;Workshop date, venue, and registration&#34;&gt;
-  &lt;a class=&#34;space-event-register&#34; href=&#34;https://forms.cloud.microsoft/r/nTEnSmP4BN&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34; aria-label=&#34;Register for the workshop (opens new tab)&#34;&gt;
-    &lt;strong&gt;Register now &lt;span aria-hidden=&#34;true&#34;&gt;↗&lt;/span&gt;&lt;/strong&gt;
-  &lt;/a&gt;
+&lt;div class=&#34;space-event-summary&#34; aria-label=&#34;Workshop date and venue&#34;&gt;
   &lt;div class=&#34;space-event-date&#34; aria-label=&#34;Saturday and Sunday, November 7 to 8, 2026&#34;&gt;
     &lt;span class=&#34;space-card-label&#34;&gt;DATE&lt;/span&gt;
     &lt;div class=&#34;space-date-numerals&#34;&gt;&lt;span class=&#34;space-date-month&#34;&gt;November&lt;/span&gt;&lt;span class=&#34;space-date-days&#34;&gt;7–8&lt;/span&gt;&lt;span class=&#34;space-date-year&#34;&gt;2026&lt;/span&gt;&lt;/div&gt;
@@ -979,7 +975,6 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
 &lt;p class=&#34;space-small&#34;&gt;See the &lt;a href=&#34;https://www.hko.gov.hk/en/cis/normal/1991_2020/normals.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hong Kong Observatory&#39;s historical climate normals ↗&lt;/a&gt; and &lt;a href=&#34;https://www.hko.gov.hk/en/wxinfo/currwx/fnd.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;9-day weather forecast ↗&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;&lt;/details&gt;&lt;/section&gt;&lt;section aria-labelledby=&#34;space-information-title&#34; class=&#34;space-fold-section&#34; id=&#34;space-information&#34;&gt;&lt;details class=&#34;space-fold space-main-fold&#34;&gt;&lt;summary class=&#34;space-fold-heading&#34;&gt;&lt;h2 class=&#34;space-section space-fold-title&#34; id=&#34;space-information-title&#34;&gt;Information for participants&lt;/h2&gt;&lt;/summary&gt;&lt;div class=&#34;space-fold-content&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Registration:&lt;/strong&gt; Complete the &lt;a href=&#34;https://forms.cloud.microsoft/r/nTEnSmP4BN&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;workshop registration form ↗&lt;/a&gt;. Attendance is subject to capacity and confirmation by the organizers. Registered participants will receive logistical details by email closer to the workshop. Registration may close early if venue capacity is reached.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Meals:&lt;/strong&gt; Coffee breaks are on the program. Workshop lunches on both days and Saturday&#39;s dinner are &lt;strong&gt;covered for all oral and poster presenters&lt;/strong&gt;. For other attendees, these meals are by invitation only. Nearby dining options include Diners@LSKBB (LSK canteen, our favorite Ma-la-tang place), UniQue (Conference Lodge), and Ebeneezer&#39;s (Middle Eastern).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Posters:&lt;/strong&gt; Displays and informal discussion begin on Saturday lunchtime and continue during lunch and coffee breaks on both days. Poster presenters should follow the printing and display instructions sent by the organizers.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Wi-Fi:&lt;/strong&gt; Visitors from participating universities can use &lt;em&gt;eduroam&lt;/em&gt;; public areas of HKUST also offer &lt;em&gt;Wi-Fi.HK via HKUST&lt;/em&gt;. See the &lt;a href=&#34;https://itso.hkust.edu.hk/services/general-it-services/wifi/wi-fi-guests&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;HKUST visitor Wi-Fi guide ↗&lt;/a&gt;.&lt;/li&gt;
