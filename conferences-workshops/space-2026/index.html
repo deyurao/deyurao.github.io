@@ -1298,17 +1298,21 @@ body:has(.space26) .space26 { margin:0; border:0; }
 .space26 .space-ias-logos img,
 .space26 .space-ias-logos > a:first-child img { height: auto; max-height: 78px; width: 100%; }
 .space26 .space-logo-divider { height: 46px; }
-@media (max-width:700px) {
-  .space26 .space-supporter { min-height: 0; padding: 3px .3rem; }
-  .space26 .space-supporter-econ { padding-left: 1.35rem; padding-right: 1.35rem; }
-  .space26 .space-ias-logos { padding-left: 1.2rem; padding-right: 1.2rem; }
-  .space26 .space-supporter-ceg { padding-left: .15rem; padding-right: .15rem; }
-  .space26 .space-supporter-econ img { height: auto; max-height: 84px; }
-  .space26 .space-supporter-ceg img { max-height: 52px; width: 96%; max-width: 96%; }
+@media (max-width: 750px) {
+  .space26 .space-supporters { grid-template-columns: 1fr; }
+  .space26 .space-supporter { justify-content: center; min-height: 0; padding: 12px 16px; }
+  .space26 .space-supporter-econ,
+  .space26 .space-ias-logos,
+  .space26 .space-supporter-ceg { padding: 12px 18px; }
+  .space26 .space-supporter-econ img { width: auto; max-width: 92%; height: auto; max-height: 84px; }
+  .space26 .space-ias-logos { display: flex; justify-content: center; align-items: center; gap: .7rem; width: 100%; min-height: 0; }
+  .space26 .space-ias-logos > a,
   .space26 .space-ias-logos > a:first-child,
-  .space26 .space-ias-logos > a:last-child { height: auto; }
+  .space26 .space-ias-logos > a:last-child { flex: 0 1 auto; width: auto; max-width: 44%; height: auto; min-width: 0; }
   .space26 .space-ias-logos img,
-  .space26 .space-ias-logos > a:first-child img { height: auto; max-height: 72px; }
+  .space26 .space-ias-logos > a:first-child img { width: auto; max-width: 100%; height: auto; max-height: 74px; }
+  .space26 .space-logo-divider { height: 48px; align-self: center; }
+  .space26 .space-supporter-ceg img { width: auto; max-width: 90%; height: auto; max-height: 80px; }
 }
 .space26 .space-date-numerals { flex-wrap: wrap; white-space: normal; }
 @media (max-width: 700px) {
@@ -1514,7 +1518,7 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
 <li><strong>Shanghai Jiao Tong University:</strong> <a class="space-name-link" href="https://www.acem.sjtu.edu.cn/en/faculty/luming.html" rel="noopener" target="_blank"><span class="space-family-name">LU</span>, Ming</a><span class="space-name-native" lang="zh-Hant">陸 銘</span> and <a class="space-name-link" href="https://lexuecon.weebly.com/" rel="noopener" target="_blank"><span class="space-family-name">XU</span>, Le</a><span class="space-name-native" lang="zh-Hant">徐 玏</span></li>
 </ul>
 <p>For workshop enquiries: <a href="mailto:dyrao@ust.hk?subject=Asian%20SPACE%20Workshop%202026">dyrao@ust.hk</a>.</p><p class="space-small space-past-workshops space-past-workshops-footer">Previous regional SPACE workshops: <a href="https://www.shine.sjtu.edu.cn/shine/forums/86229.html" rel="noopener" target="_blank">Osaka University (2024)</a> <span aria-hidden="true">·</span> <a href="https://cures.hias.hit-u.ac.jp/en/event/20251031/" rel="noopener" target="_blank">Hitotsubashi University (2025)</a></p>
-<p class="space-small">Last updated: October 26, 2026. The program, logistics, and accommodation suggestions are subject to change.</p>
+<p class="space-small">Last updated: October 27, 2026. The program, logistics, and accommodation suggestions are subject to change.</p>
 </div></details></section>
 <script>
 (function () {
