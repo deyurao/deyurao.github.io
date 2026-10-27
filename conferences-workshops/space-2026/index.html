@@ -1338,6 +1338,12 @@ body:has(.space26) .space26 { margin:0; border:0; }
  .space26:not([data-space-theme="light"]) .space-event-date .space-date-days,
  .space26:not([data-space-theme="light"]) .space-event-date .space-date-year {color:#142f48;}
 }
+.space26 a.space-event-detail-link {position:absolute;inset:0;z-index:1;border-radius:inherit;background:transparent;text-decoration:none;color:transparent;}
+.space26 a.space-event-detail-link:hover,.space26 a.space-event-detail-link:focus {background:transparent;text-decoration:none;color:transparent;}
+.space26 a.space-event-detail-link:focus-visible {outline:2px solid var(--space-teal);outline-offset:2px;}
+.space26 .space-event-detail-link-text {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.space26 .space-event-detail:hover {border-color:var(--space-teal);}
+.space26 .space-venue-map-link {position:relative;z-index:2;}
 
 @media (max-width: 700px) {
   .space26 .space-table-scroll { overflow-x: visible; }
@@ -1397,6 +1403,7 @@ body:has(.space26) .space26 { margin:0; border:0; }
     <span class="space-date-weekdays">SATURDAY – SUNDAY</span>
   </div>
   <div class="space-event-detail">
+    <a class="space-event-detail-link" href="#space-venue"><span class="space-event-detail-link-text">Venue and travel</span></a>
     <span class="space-card-label">WORKSHOP VENUE</span>
     <strong>HKUST · IAS Building <a class="space-venue-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=HKUST+Jockey+Club+Institute+for+Advanced+Study" rel="noopener" target="_blank" aria-label="IAS Building on Google Maps (opens new tab)">Google Maps ↗</a></strong>
     <span class="space-detail-subtext">Room IAS 4042 · 4/F</span>
