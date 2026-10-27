@@ -727,29 +727,52 @@ body:has(.space26) .space26 { margin:0; border:0; }
   .space26 .space-supporter-ceg img { width: auto; max-width: 90%; height: auto; max-height: 80px; }
 }
 .space26 .space-date-numerals { flex-wrap: wrap; white-space: normal; }
-/* Date card uses the former registration contrast so it reads apart from the venue card. */
-.space26 .space-event-date {background:#153e63;border:1px solid #204e77;color:#fff;}
-.space26 .space-event-date .space-card-label {color:#d4e8f6;}
+/* Three card depths, lightest to deepest: venue, date, registration. */
+.space26 .space-event-register {background:#0f3152;border:1px solid #1a456c;color:#fff;}
+.space26 .space-event-register:hover,.space26 .space-event-register:focus-visible {background:#1a4a72;color:#fff;}
+.space26 a.space-event-register,.space26 a.space-event-register strong {color:#fff !important;}
+.space26 .space-event-date {background:#3a6890;border:1px solid #4a789e;color:#fff;}
+.space26 .space-event-date .space-card-label {color:#e7f3fb;}
 .space26 .space-event-date .space-date-numerals,
 .space26 .space-event-date .space-date-month,
 .space26 .space-event-date .space-date-days,
 .space26 .space-event-date .space-date-year {color:#fff;}
-.space26 .space-event-date .space-date-weekdays {color:#d7edf5;}
-.space26[data-space-theme=&#34;dark&#34;] .space-event-date {background:#e3edf5;color:#142f48;border-color:#d0e2ee;}
+.space26 .space-event-date .space-date-weekdays {color:#e3f1fa;}
+.space26 .space-event-detail {background:#e5f0f8;border:1px solid #c5d9e8;color:#16324c;}
+.space26 .space-event-detail .space-card-label,
+.space26 .space-event-detail .space-detail-subtext {color:#4a6276;}
+.space26 .space-event-detail strong {color:#16324c;}
+.space26[data-space-theme=&#34;dark&#34;] .space-event-register {background:#eef5fb;color:#10283f;border-color:#d4e4f0;}
+.space26[data-space-theme=&#34;dark&#34;] .space-event-register:hover,.space26[data-space-theme=&#34;dark&#34;] .space-event-register:focus-visible {background:#fff;color:#10283f;}
+.space26[data-space-theme=&#34;dark&#34;] a.space-event-register,
+.space26[data-space-theme=&#34;dark&#34;] a.space-event-register strong {color:#10283f !important;}
+.space26[data-space-theme=&#34;dark&#34;] .space-event-date {background:#8fadc8;color:#10283f;border-color:#7ea0be;}
 .space26[data-space-theme=&#34;dark&#34;] .space-event-date .space-card-label,
-.space26[data-space-theme=&#34;dark&#34;] .space-event-date .space-date-weekdays {color:#3d5870;}
+.space26[data-space-theme=&#34;dark&#34;] .space-event-date .space-date-weekdays {color:#1a3348;}
 .space26[data-space-theme=&#34;dark&#34;] .space-event-date .space-date-numerals,
 .space26[data-space-theme=&#34;dark&#34;] .space-event-date .space-date-month,
 .space26[data-space-theme=&#34;dark&#34;] .space-event-date .space-date-days,
-.space26[data-space-theme=&#34;dark&#34;] .space-event-date .space-date-year {color:#142f48;}
+.space26[data-space-theme=&#34;dark&#34;] .space-event-date .space-date-year {color:#10283f;}
+.space26[data-space-theme=&#34;dark&#34;] .space-event-detail {background:#1e3348;color:#e7f1f8;border-color:#34506a;}
+.space26[data-space-theme=&#34;dark&#34;] .space-event-detail .space-card-label,
+.space26[data-space-theme=&#34;dark&#34;] .space-event-detail .space-detail-subtext {color:#c5d5e4;}
+.space26[data-space-theme=&#34;dark&#34;] .space-event-detail strong {color:#e7f1f8;}
 @media (prefers-color-scheme:dark) {
- .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date {background:#e3edf5;color:#142f48;border-color:#d0e2ee;}
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-register {background:#eef5fb;color:#10283f;border-color:#d4e4f0;}
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-register:hover,.space26:not([data-space-theme=&#34;light&#34;]) .space-event-register:focus-visible {background:#fff;color:#10283f;}
+ .space26:not([data-space-theme=&#34;light&#34;]) a.space-event-register,
+ .space26:not([data-space-theme=&#34;light&#34;]) a.space-event-register strong {color:#10283f !important;}
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date {background:#8fadc8;color:#10283f;border-color:#7ea0be;}
  .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date .space-card-label,
- .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date .space-date-weekdays {color:#3d5870;}
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date .space-date-weekdays {color:#1a3348;}
  .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date .space-date-numerals,
  .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date .space-date-month,
  .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date .space-date-days,
- .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date .space-date-year {color:#142f48;}
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-date .space-date-year {color:#10283f;}
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-detail {background:#1e3348;color:#e7f1f8;border-color:#34506a;}
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-detail .space-card-label,
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-detail .space-detail-subtext {color:#c5d5e4;}
+ .space26:not([data-space-theme=&#34;light&#34;]) .space-event-detail strong {color:#e7f1f8;}
 }
 .space26 a.space-event-detail-link {position:absolute;inset:0;z-index:1;border-radius:inherit;background:transparent;text-decoration:none;color:transparent;}
 .space26 a.space-event-detail-link:hover,.space26 a.space-event-detail-link:focus {background:transparent;text-decoration:none;color:transparent;}
