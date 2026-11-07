@@ -645,9 +645,9 @@
 .space26 .space-stay-map { height: min(460px, 72vw); min-height: 300px; margin: .15rem 0 .55rem; border: 1px solid var(--space-border); border-radius: .45rem; overflow: hidden; position: relative; z-index: 0; background: var(--space-bg); }
 .space26 .leaflet-tooltip.space-map-label { background:#fff; border:1px solid #c5d0dc; color:#16324c; font-weight:650; font-size:.78rem; box-shadow:none; padding:1px 6px; }
 .space26 .leaflet-tooltip.space-map-label-venue { background:#137c78; border-color:#0d5c58; color:#fff; }
-.space26[data-space-theme="dark"] .space-stay-map .leaflet-tile-pane { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+.space26[data-space-theme="dark"] .space-stay-map:not(.space-dining-map) .leaflet-tile-pane { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
 @media (prefers-color-scheme: dark) {
-  .space26:not([data-space-theme]) .space-stay-map .leaflet-tile-pane { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+  .space26:not([data-space-theme]) .space-stay-map:not(.space-dining-map) .leaflet-tile-pane { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
 }
 .space26 .space-map-note { margin: 0 0 .9rem; }
 .space26 .space-hotel.is-routed { border-color: #137c78; box-shadow: inset 0 0 0 1px #137c78; }
@@ -1601,7 +1601,7 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
 <li><strong>Time zone:</strong> Hong Kong time is UTC+8. All talks take place in person at the Clear Water Bay campus.</li>
 </ul>
 <p class="space-small">The map marks the workshop venue and the nearby restaurants.</p>
-<div id="space-dining-map" class="space-stay-map" role="region" aria-label="Map of the IAS Building and nearby restaurants"></div>
+<div id="space-dining-map" class="space-stay-map space-dining-map" role="region" aria-label="Map of the IAS Building and nearby restaurants"></div>
 <p class="space-small space-map-note">IAS Building is the workshop venue. Diners@LSKBB and Ebeneezer's are in the Lee Shau Kee Business Building, UniBistro is in the University Center, and UniQue is in Conference Lodge.</p>
 </div></details></section>
 <section aria-labelledby="space-organizers-title" class="space-fold-section" id="space-organizers"><details class="space-fold space-main-fold" open=""><summary class="space-fold-heading"><h2 class="space-section space-fold-title" id="space-organizers-title">Organizing Committee</h2></summary><div class="space-fold-content">
@@ -1682,9 +1682,16 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
     if (!el || el.getAttribute("data-ready")) return;
     el.setAttribute("data-ready", "1");
     var diningMap = L.map(el, { scrollWheelZoom: false });
-    L.tileLayer(tileUrl(), {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      maxZoom: 19
+    function diningTileUrl() {
+      var root = document.querySelector(".space26");
+      var theme = root && root.getAttribute("data-space-theme");
+      var dark = theme === "dark" || (theme !== "light" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      return "https://{s}.basemaps.cartocdn.com/" + (dark ? "dark_nolabels" : "light_nolabels") + "/{z}/{x}/{y}{r}.png";
+    }
+    var diningTiles = L.tileLayer(diningTileUrl(), {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: "abcd",
+      maxZoom: 20
     }).addTo(diningMap);
     var spots = [
       { name: "IAS Building", lat: 22.3328162, lng: 114.2663144, venue: true, direction: "left" },
@@ -1722,6 +1729,14 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
     var section = document.getElementById("space-information");
     var details = section && section.querySelector("details");
     if (details) details.addEventListener("toggle", function () { if (details.open) setTimeout(fitDining, 60); });
+    var themeRoot = document.querySelector(".space26");
+    if (themeRoot && window.MutationObserver) {
+      new MutationObserver(function () { diningTiles.setUrl(diningTileUrl()); }).observe(themeRoot, { attributes: true, attributeFilter: ["data-space-theme"] });
+    }
+    if (window.matchMedia) {
+      var diningScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (diningScheme.addEventListener) diningScheme.addEventListener("change", function () { diningTiles.setUrl(diningTileUrl()); });
+    }
   }
   function boot() {
     if (!window.L) return;
