@@ -643,6 +643,8 @@
 .space26 .space-hotel h4 { margin: 0 0 .3rem; font-size: 1rem; color: var(--space-blue); }
 .space26 .space-hotel p { margin: .2rem 0 .45rem; font-size: .9rem; }
 .space26 .space-stay-map { height: min(460px, 72vw); min-height: 300px; margin: .15rem 0 .55rem; border: 1px solid var(--space-border); border-radius: .45rem; overflow: hidden; position: relative; z-index: 0; background: var(--space-bg); }
+.space26 .leaflet-tooltip.space-map-label { background:#fff; border:1px solid #c5d0dc; color:#16324c; font-weight:650; font-size:.78rem; box-shadow:none; padding:1px 6px; }
+.space26 .leaflet-tooltip.space-map-label-venue { background:#137c78; border-color:#0d5c58; color:#fff; }
 .space26[data-space-theme="dark"] .space-stay-map .leaflet-tile-pane { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
 @media (prefers-color-scheme: dark) {
   .space26:not([data-space-theme]) .space-stay-map .leaflet-tile-pane { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
@@ -1592,12 +1594,15 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
 </div></details></section><section aria-labelledby="space-information-title" class="space-fold-section" id="space-information"><details class="space-fold space-main-fold"><summary class="space-fold-heading"><h2 class="space-section space-fold-title" id="space-information-title">Information for participants</h2></summary><div class="space-fold-content">
 <ul>
 <li><strong>Registration:</strong> Public registration is closed because of space constraints. You are welcome to drop by. See the <a href="https://deyurao.github.io/conferences-workshops/space-2026-registration/">registration notice</a>, or contact <a href="mailto:dyrao@ust.hk">dyrao@ust.hk</a>.</li>
-<li><strong>Meals:</strong> Coffee breaks are on the program. Workshop lunches on both days and Saturday's dinner are <strong>covered for all oral and poster presenters</strong>. For other attendees, these meals are by invitation only. Nearby dining options include Diners@LSKBB (LSK canteen, our favorite Ma-la-tang place), UniQue (Conference Lodge), and Ebeneezer's (Middle Eastern).</li>
+<li><strong>Meals:</strong> Coffee breaks are on the program. Workshop lunches on both days and Saturday's dinner are <strong>covered for all oral and poster presenters</strong>. For other attendees, these meals are by invitation only. Nearby dining options include Diners@LSKBB (LSK canteen, our favorite Ma-la-tang place), UniBistro (University Center), UniQue (Conference Lodge), and Ebeneezer's (Middle Eastern).</li>
 <li><strong>Posters:</strong> Displays and informal discussion begin on Saturday lunchtime and continue during lunch and coffee breaks on both days. Poster presenters should follow the printing and display instructions sent by the organizers.</li>
 <li><strong>Wi-Fi:</strong> Visitors from participating universities can use <em>eduroam</em>; public areas of HKUST also offer <em>Wi-Fi.HK via HKUST</em>. See the <a href="https://itso.hkust.edu.hk/services/general-it-services/wifi/wi-fi-guests" rel="noopener" target="_blank">HKUST visitor Wi-Fi guide ↗</a>.</li>
 <li><strong>Travel documents:</strong> Check whether you need a visa or other entry documentation for Hong Kong well before departure. Registered participants who need an invitation letter should contact the organizers early.</li>
 <li><strong>Time zone:</strong> Hong Kong time is UTC+8. All talks take place in person at the Clear Water Bay campus.</li>
 </ul>
+<p class="space-small">The map marks the workshop venue and the nearby restaurants.</p>
+<div id="space-dining-map" class="space-stay-map" role="region" aria-label="Map of the IAS Building and nearby restaurants"></div>
+<p class="space-small space-map-note">IAS Building is the workshop venue. Diners@LSKBB and Ebeneezer's are in the Lee Shau Kee Business Building, UniBistro is in the University Center, and UniQue is in Conference Lodge.</p>
 </div></details></section>
 <section aria-labelledby="space-organizers-title" class="space-fold-section" id="space-organizers"><details class="space-fold space-main-fold" open=""><summary class="space-fold-heading"><h2 class="space-section space-fold-title" id="space-organizers-title">Organizing Committee</h2></summary><div class="space-fold-content">
 <ul class="space-organizer-list">
@@ -1672,9 +1677,57 @@ Hong Kong University of Science and Technology, Clear Water Bay, Kowloon, Hong K
       if (activeId === stay.id && routeLine) routeLine.setLatLngs(routes[stay.id]);
     }).catch(function () {});
   }
+  function bootDiningMap() {
+    var el = document.getElementById("space-dining-map");
+    if (!el || el.getAttribute("data-ready")) return;
+    el.setAttribute("data-ready", "1");
+    var diningMap = L.map(el, { scrollWheelZoom: false });
+    L.tileLayer(tileUrl(), {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    }).addTo(diningMap);
+    var spots = [
+      { name: "IAS Building", lat: 22.3328162, lng: 114.2663144, venue: true, direction: "left" },
+      { name: "UniQue", lat: 22.3320305, lng: 114.2666454, direction: "top" },
+      { name: "Ebeneezer's", lat: 22.3330568, lng: 114.2648923, direction: "right" },
+      { name: "Diners@LSKBB", lat: 22.3333844, lng: 114.2648973, direction: "top" },
+      { name: "UniBistro", lat: 22.3358096, lng: 114.2649942, direction: "bottom" }
+    ];
+    var points = [];
+    spots.forEach(function (spot) {
+      points.push([spot.lat, spot.lng]);
+      var offset = [0, -8];
+      if (spot.direction === "bottom") offset = [0, 8];
+      if (spot.direction === "right") offset = [10, 0];
+      if (spot.direction === "left") offset = [-10, 0];
+      L.circleMarker([spot.lat, spot.lng], {
+        radius: spot.venue ? 10 : 7,
+        color: spot.venue ? "#083f3c" : "#ffffff",
+        weight: 2,
+        fillColor: spot.venue ? "#137c78" : "#1e4f86",
+        fillOpacity: 1
+      }).addTo(diningMap).bindTooltip(spot.name, {
+        permanent: true,
+        direction: spot.direction,
+        offset: offset,
+        className: spot.venue ? "space-map-label space-map-label-venue" : "space-map-label"
+      });
+    });
+    var bounds = L.latLngBounds(points);
+    function fitDining() {
+      diningMap.invalidateSize();
+      diningMap.fitBounds(bounds, { padding: [28, 36], maxZoom: 17 });
+    }
+    fitDining();
+    var section = document.getElementById("space-information");
+    var details = section && section.querySelector("details");
+    if (details) details.addEventListener("toggle", function () { if (details.open) setTimeout(fitDining, 60); });
+  }
   function boot() {
+    if (!window.L) return;
+    bootDiningMap();
     var el = document.getElementById("space-stay-map");
-    if (!el || !window.L || el.getAttribute("data-ready")) return;
+    if (!el || el.getAttribute("data-ready")) return;
     el.setAttribute("data-ready", "1");
     map = L.map(el, { scrollWheelZoom: false });
     tiles = L.tileLayer(tileUrl(), {
